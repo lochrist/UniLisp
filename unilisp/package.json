@@ -1,0 +1,14 @@
+{
+  "name": "unilisp",
+  "displayName": "UniLisp",
+  "version": "0.1.0",
+  "unity": "2021.2",
+  "description": "This is UniLisp. Simple lisp implementation for Unity with Search integration.",
+  "keywords": [
+    "unity",
+    "lisp",
+    "programming",
+    "scripting",
+    "search"
+  ]
+}
