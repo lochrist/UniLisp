@@ -96,11 +96,13 @@ namespace UniLisp
                 {
                     foreach (var v in result.listValue)
                     {
+                        if (v.type == LispType.EoF)
+                            continue;
                         var itemStr = v.ToString();
                         yield return provider.CreateItem(itemStr, itemStr, v.type.ToString(), null, null);
                     }
                 }
-                else
+                else if (result.type != LispType.EoF)
                 {
                     var itemStr = result.ToString();
                     yield return provider.CreateItem(itemStr, itemStr, result.type.ToString(), null, null);

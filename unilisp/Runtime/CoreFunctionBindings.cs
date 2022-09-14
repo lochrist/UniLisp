@@ -161,6 +161,12 @@ public static class CoreFunctionBindings
         return LispValue.Create(args[0].type == LispType.Boolean);
     }
 
+    public static LispValue IsNull(LispContext ctx, List<LispValue> args)
+    {
+        ValidateArgsCount(args, 1);
+        return LispValue.Create(args[0].type == LispType.Nil || (args[0].type == LispType.List && args[0].listValue.Count == 0));
+    }
+
     public static LispValue Eval(LispContext ctx, List<LispValue> args)
     {
         ValidateArgsCount(args, 1);

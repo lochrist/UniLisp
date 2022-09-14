@@ -616,6 +616,7 @@ namespace UniLisp
                     throw new LispSyntaxException($"Malformed if {LispValue.Stringigy(expr)}");
                 expr.listValue[1] = Expand(expr.listValue[1]);
                 expr.listValue[2] = Expand(expr.listValue[2]);
+                expr.listValue[3] = Expand(expr.listValue[3]);
                 return expr;
             }
 
@@ -689,7 +690,8 @@ namespace UniLisp
                 if (!isValidArgList)
                     throw new LispSyntaxException($"Illegal lambda arguments list {LispValue.Stringigy(variables)}");
                 var bodyExpr = expr.listValue.Count == 3 ? expr.listValue[2] : LispValue.Create(new[] { begin }.Concat(expr.listValue.Skip(2)).ToList());
-                return LispValue.Create(lambda, variables, bodyExpr);
+                var expandedBodyExpr = Expand(bodyExpr);
+                return LispValue.Create(lambda, variables, expandedBodyExpr);
             }
 
             if (EqSym(expr.listValue[0], @quasiquote))
@@ -802,6 +804,7 @@ namespace UniLisp
             RegisterProcedure("symbol?", CoreFunctionBindings.IsSymbol);
             RegisterProcedure("string?", CoreFunctionBindings.IsString);
             RegisterProcedure("boolean?", CoreFunctionBindings.IsBoolean);
+            RegisterProcedure("null?", CoreFunctionBindings.IsNull);
 
             RegisterProcedure("car", CoreFunctionBindings.Car);
             RegisterProcedure("first", CoreFunctionBindings.Car);
@@ -814,6 +817,16 @@ namespace UniLisp
             RegisterProcedure("length", CoreFunctionBindings.Length);
 
             RegisterProcedure("eval", CoreFunctionBindings.Eval);
+
+            var initCode = @"(begin
+(define-macro and (lambda args 
+   (if (null? args) #t
+       (if (= (length args) 1) (car args)
+           `(if ,(car args) (and ,@(cdr args)) #f)))))
+)
+";
+            Eval(initCode);
+
         }
     }
 }

@@ -199,7 +199,7 @@ public class UniLispTests
         new StringifyTestCase("(3 (\"hello\" \"world\" 69) #t)", "(3 (\"hello\" \"world\" 69) #t)"),
         new StringifyTestCase("'ping", "(quote ping)"),
         new StringifyTestCase("`ping", "(quote ping)"),
-        new StringifyTestCase("(if #t 'ping `pong)", "(if #t (quote ping) (quasiquote pong))"),
+        new StringifyTestCase("(if #t 'ping `pong)", "(if #t (quote ping) (quote pong))"),
         new StringifyTestCase("`(testing1 ,@L testing2)", "(cons (quote testing1) (append L (cons (quote testing2) (quote ()))))"),
         new StringifyTestCase("`(testing1 ,L testing2)", "(cons (quote testing1) (cons L (cons (quote testing2) (quote ()))))"),
 
@@ -213,15 +213,22 @@ public class UniLispTests
         new StringifyTestCase("(if (= 1 2) (define-macro a 'a) (define-macro a 'b))") { shouldThrow = true },
         new StringifyTestCase("(define (twice x) (* x x)") { shouldThrow = true },
 
+        new StringifyTestCase("(lambda (x) `(1 2 4))", "(lambda (x) (cons (quote 1) (cons (quote 2) (cons (quote 4) (quote ())))))"),
+
         new StringifyTestCase("(if #t 'ping 'pong)", "(if #t (quote ping) (quote pong))"),
         new StringifyTestCase("(if #t 'ping)", "(if #t (quote ping) nil)"),
 
         new StringifyTestCase("(begin)", "nil"),
         new StringifyTestCase("(begin 1 2 (if #t 'ping))", "(begin 1 2 (if #t (quote ping) nil))"),
 
+        new StringifyTestCase(@"(begin 
+1 2 (if #t 'ping))", "(begin 1 2 (if #t (quote ping) nil))"),
+
         new StringifyTestCase("(define (twice x) (* x x))", "(define twice (lambda (x) (* x x)))"),
 
-        new StringifyTestCase("(func 'ping 'pong)", "(func (quote ping) (quote pong))")
+        new StringifyTestCase("(func 'ping 'pong)", "(func (quote ping) (quote pong))"),
+
+        new StringifyTestCase("(and (> 2 1) (= 4 4))", "(if (> 2 1) (= 4 4) #f)"),
     };
 
     [Test]
