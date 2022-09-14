@@ -89,6 +89,26 @@ public static class CoreFunctionBindings
         return LispValue.Create(args);
     }
 
+    public static LispValue Car(LispContext ctx, List<LispValue> args)
+    {
+        ValidateArgsCount(args, 1);
+        if (args[0].type != LispType.List)
+            throw new LispRuntimeException($"Non list argument");
+        if (args[0].listValue.Count == 0)
+            throw new LispRuntimeException($"Empty list");
+        return args[0].listValue[0];
+    }
+
+    public static LispValue Cdr(LispContext ctx, List<LispValue> args)
+    {
+        ValidateArgsCount(args, 1);
+        if (args[0].type != LispType.List)
+            throw new LispRuntimeException($"Non list argument");
+        if (args[0].listValue.Count < 1)
+            throw new LispRuntimeException($"No rest");
+        return LispValue.Create(args[0].listValue.Skip(1).ToList());
+    }
+
     public static LispValue Append(LispContext ctx, List<LispValue> args)
     {
         ValidateArgsCount(args, 1);

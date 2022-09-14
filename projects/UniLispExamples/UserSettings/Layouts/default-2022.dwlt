@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 43
-    width: 1920
-    height: 997
+    x: 2017
+    y: 85
+    width: 1412
+    height: 803
   m_ShowMode: 4
-  m_Title: Test Runner
+  m_Title: Console
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 1
+  m_Maximized: 0
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -43,12 +43,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1920
-    height: 947
+    width: 1412
+    height: 753
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 102
+  controlID: 17
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,10 +64,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1466
+    x: 1075
     y: 0
-    width: 454
-    height: 947
+    width: 337
+    height: 753
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
@@ -92,8 +92,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 363
-    height: 561
+    width: 257
+    height: 433
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
@@ -111,23 +111,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 561
-    width: 1466
-    height: 386
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 13}
+    y: 433
+    width: 1075
+    height: 320
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,8 +148,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
-    height: 997
+    width: 1412
+    height: 803
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -173,7 +173,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
+    width: 1412
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -194,8 +194,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 977
-    width: 1920
+    y: 783
+    width: 1412
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -218,12 +218,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1466
-    height: 947
+    width: 1075
+    height: 753
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 77
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,8 +243,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1466
-    height: 561
+    width: 1075
+    height: 433
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
@@ -264,10 +264,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 363
+    x: 257
     y: 0
-    width: 1103
-    height: 561
+    width: 818
+    height: 433
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
@@ -297,21 +297,21 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 363
-    y: 73
-    width: 1101
-    height: 540
+    x: 2274
+    y: 115
+    width: 816
+    height: 412
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 617
+    ID: 131
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
-    - 352
-    - 118
+    - 256
+    - 86
     relativeSizes:
     - 0.75
     - 0.25
@@ -321,7 +321,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 470
+    lastTotalSize: 342
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -390,7 +390,7 @@ MonoBehaviour:
       name: UniLisp
       fullName: UniLisp
       resultStatus: 1
-      duration: 0.0444411
+      duration: 0.0841551
       messages: 
       output: 
       stacktrace: 
@@ -406,7 +406,7 @@ MonoBehaviour:
       name: Assembly-CSharp-Editor.dll
       fullName: E:/work/code/UniLisp/projects/UniLispExamples/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
       resultStatus: 1
-      duration: 0.0258207
+      duration: 0.0638643
       messages: 
       output: 
       stacktrace: 
@@ -422,7 +422,7 @@ MonoBehaviour:
       name: UniLispTests
       fullName: UniLispTests
       resultStatus: 1
-      duration: 0.0239341
+      duration: 0.061354
       messages: 
       output: 
       stacktrace: 
@@ -433,12 +433,2878 @@ MonoBehaviour:
       categories: []
       parentId: 1006
       parentUniqueId: '[Assembly-CSharp-Editor][E:/work/code/UniLisp/projects/UniLispExamples/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll][suite]'
+    - id: 1003
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.DelegateDynamicCalling]
+      name: DelegateDynamicCalling
+      fullName: UniLispTests.DelegateDynamicCalling
+      resultStatus: 1
+      duration: 0.0046628
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Assembly-CSharp-Editor.dll/[Assembly-CSharp-Editor][UniLispTests][suite]
+    - id: 1083
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+      name: Eval
+      fullName: UniLispTests.Eval
+      resultStatus: 1
+      duration: 0.0579549
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: Assembly-CSharp-Editor.dll/[Assembly-CSharp-Editor][UniLispTests][suite]
+    - id: 1068
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Eval/[Assembly-CSharp-Editor][UniLispTests.Eval(nil)]
+      name: Eval(nil)
+      fullName: UniLispTests.Eval(nil)
+      resultStatus: 1
+      duration: 0.0143994
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+    - id: 1069
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Eval/[Assembly-CSharp-Editor][UniLispTests.Eval(4)]
+      name: Eval(4)
+      fullName: UniLispTests.Eval(4)
+      resultStatus: 1
+      duration: 0.0005594
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+    - id: 1070
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Eval/[Assembly-CSharp-Editor][UniLispTests.Eval(4.5)]
+      name: Eval(4.5)
+      fullName: UniLispTests.Eval(4.5)
+      resultStatus: 1
+      duration: 0.000206
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+    - id: 1071
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Eval/[Assembly-CSharp-Editor][UniLispTests.Eval("hello")]
+      name: Eval("hello")
+      fullName: UniLispTests.Eval("hello")
+      resultStatus: 1
+      duration: 0.0002723
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+    - id: 1072
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Eval/[Assembly-CSharp-Editor][UniLispTests.Eval(#t)]
+      name: Eval(#t)
+      fullName: UniLispTests.Eval(#t)
+      resultStatus: 1
+      duration: 0.0001811
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+    - id: 1073
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Eval/[Assembly-CSharp-Editor][UniLispTests.Eval(#f)]
+      name: Eval(#f)
+      fullName: UniLispTests.Eval(#f)
+      resultStatus: 1
+      duration: 0.0001766
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+    - id: 1074
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Eval/[Assembly-CSharp-Editor][UniLispTests.Eval((if
+        #t 'ping 'pong) => ping)]
+      name: Eval((if #t 'ping 'pong) => ping)
+      fullName: UniLispTests.Eval((if #t 'ping 'pong) => ping)
+      resultStatus: 1
+      duration: 0.0009863
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+    - id: 1075
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Eval/[Assembly-CSharp-Editor][UniLispTests.Eval((if
+        #f 'ping 'pong) => pong)]
+      name: Eval((if #f 'ping 'pong) => pong)
+      fullName: UniLispTests.Eval((if #f 'ping 'pong) => pong)
+      resultStatus: 1
+      duration: 0.0005849
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+    - id: 1076
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Eval/[Assembly-CSharp-Editor][UniLispTests.Eval((if
+        #f 'ping) => nil)]
+      name: Eval((if #f 'ping) => nil)
+      fullName: UniLispTests.Eval((if #f 'ping) => nil)
+      resultStatus: 1
+      duration: 0.0004247
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+    - id: 1077
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Eval/[Assembly-CSharp-Editor][UniLispTests.Eval((begin)
+        => nil)]
+      name: Eval((begin) => nil)
+      fullName: UniLispTests.Eval((begin) => nil)
+      resultStatus: 1
+      duration: 0.003851
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+    - id: 1078
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Eval/[Assembly-CSharp-Editor][UniLispTests.Eval((begin
+        1 2 (if #t 'ping)) => ping)]
+      name: Eval((begin 1 2 (if #t 'ping)) => ping)
+      fullName: UniLispTests.Eval((begin 1 2 (if #t 'ping)) => ping)
+      resultStatus: 1
+      duration: 0.0011497
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+    - id: 1079
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Eval/[Assembly-CSharp-Editor][UniLispTests.Eval((define
+        (twice x) (* 2 x)) => nil)]
+      name: Eval((define (twice x) (* 2 x)) => nil)
+      fullName: UniLispTests.Eval((define (twice x) (* 2 x)) => nil)
+      resultStatus: 1
+      duration: 0.0023844
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+    - id: 1080
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Eval/[Assembly-CSharp-Editor][UniLispTests.Eval((set!
+        x 45) => nil)]
+      name: Eval((set! x 45) => nil)
+      fullName: UniLispTests.Eval((set! x 45) => nil)
+      resultStatus: 1
+      duration: 0.0002619
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+    - id: 1081
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Eval/[Assembly-CSharp-Editor][UniLispTests.Eval((begin
+        (set! x 45) x) => 45)]
+      name: Eval((begin (set! x 45) x) => 45)
+      fullName: UniLispTests.Eval((begin (set! x 45) x) => 45)
+      resultStatus: 1
+      duration: 0.0004092
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+    - id: 1082
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Eval/[Assembly-CSharp-Editor][UniLispTests.Eval((begin
+        (define (twice x) (* 2 x)) (twice 34)) => 68)]
+      name: Eval((begin (define (twice x) (* 2 x)) (twice 34)) => 68)
+      fullName: UniLispTests.Eval((begin (define (twice x) (* 2 x)) (twice 34)) =>
+        68)
+      resultStatus: 1
+      duration: 0.0290456
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1083
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+    - id: 1088
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Eval/[Assembly-CSharp-Editor][UniLispTests.Eval((begin
+        (define fib (lambda (n) (if (<= 2 n) (+ (fib (- n 1)) (fib (- n 2))) n )))
+        (fib 10)) => 55)]
+      name: Eval((begin (define fib (lambda (n) (if (<= 2 n) (+ (fib (- n 1)) (fib
+        (- n 2))) n ))) (fib 10)) => 55)
+      fullName: UniLispTests.Eval((begin (define fib (lambda (n) (if (<= 2 n) (+
+        (fib (- n 1)) (fib (- n 2))) n ))) (fib 10)) => 55)
+      resultStatus: 1
+      duration: 0.0406499
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1089
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Eval][suite]
+    - id: 1156
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+      name: EvalCoreLib
+      fullName: UniLispTests.EvalCoreLib
+      resultStatus: 1
+      duration: 1.196767
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: Assembly-CSharp-Editor.dll/[Assembly-CSharp-Editor][UniLispTests][suite]
+    - id: 1084
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((symbol?
+        1) => #f)]
+      name: EvalCoreLib((symbol? 1) => #f)
+      fullName: UniLispTests.EvalCoreLib((symbol? 1) => #f)
+      resultStatus: 1
+      duration: 0.0004203
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1085
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((symbol?
+        'sym) => #t)]
+      name: EvalCoreLib((symbol? 'sym) => #t)
+      fullName: UniLispTests.EvalCoreLib((symbol? 'sym) => #t)
+      resultStatus: 1
+      duration: 0.0004592
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1086
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((string?
+        1) => #f)]
+      name: EvalCoreLib((string? 1) => #f)
+      fullName: UniLispTests.EvalCoreLib((string? 1) => #f)
+      resultStatus: 1
+      duration: 0.00029
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1087
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((string?
+        "string") => #t)]
+      name: EvalCoreLib((string? "string") => #t)
+      fullName: UniLispTests.EvalCoreLib((string? "string") => #t)
+      resultStatus: 1
+      duration: 0.0002093
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1088
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((list?
+        1) => #f)]
+      name: EvalCoreLib((list? 1) => #f)
+      fullName: UniLispTests.EvalCoreLib((list? 1) => #f)
+      resultStatus: 1
+      duration: 0.0002815
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1089
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((list?
+        '(1 2 3)) => #t)]
+      name: EvalCoreLib((list? '(1 2 3)) => #t)
+      fullName: UniLispTests.EvalCoreLib((list? '(1 2 3)) => #t)
+      resultStatus: 1
+      duration: 0.0002387
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1090
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((boolean?
+        1) => #f)]
+      name: EvalCoreLib((boolean? 1) => #f)
+      fullName: UniLispTests.EvalCoreLib((boolean? 1) => #f)
+      resultStatus: 1
+      duration: 0.0002817
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1091
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((boolean?
+        #f) => #t)]
+      name: EvalCoreLib((boolean? #f) => #t)
+      fullName: UniLispTests.EvalCoreLib((boolean? #f) => #t)
+      resultStatus: 1
+      duration: 0.0002001
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1092
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((number?
+        1) => #t)]
+      name: EvalCoreLib((number? 1) => #t)
+      fullName: UniLispTests.EvalCoreLib((number? 1) => #t)
+      resultStatus: 1
+      duration: 0.0002974
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1093
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((number?
+        #f) => #f)]
+      name: EvalCoreLib((number? #f) => #f)
+      fullName: UniLispTests.EvalCoreLib((number? #f) => #f)
+      resultStatus: 1
+      duration: 0.0003982
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1094
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((+))]
+      name: EvalCoreLib((+))
+      fullName: UniLispTests.EvalCoreLib((+))
+      resultStatus: 1
+      duration: 0.0499923
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1095
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((+
+        1))]
+      name: EvalCoreLib((+ 1))
+      fullName: UniLispTests.EvalCoreLib((+ 1))
+      resultStatus: 1
+      duration: 0.0470608
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1096
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((+
+        #t 1))]
+      name: EvalCoreLib((+ #t 1))
+      fullName: UniLispTests.EvalCoreLib((+ #t 1))
+      resultStatus: 1
+      duration: 0.0466241
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1097
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((+
+        1 2 3) => 6)]
+      name: EvalCoreLib((+ 1 2 3) => 6)
+      fullName: UniLispTests.EvalCoreLib((+ 1 2 3) => 6)
+      resultStatus: 1
+      duration: 0.0004631
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1098
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((-
+        12 1 2 3) => 6)]
+      name: EvalCoreLib((- 12 1 2 3) => 6)
+      fullName: UniLispTests.EvalCoreLib((- 12 1 2 3) => 6)
+      resultStatus: 1
+      duration: 0.0004783
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1099
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((*
+        1 2 3) => 6)]
+      name: EvalCoreLib((* 1 2 3) => 6)
+      fullName: UniLispTests.EvalCoreLib((* 1 2 3) => 6)
+      resultStatus: 1
+      duration: 0.0002254
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1100
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((/
+        12 2 3) => 2)]
+      name: EvalCoreLib((/ 12 2 3) => 2)
+      fullName: UniLispTests.EvalCoreLib((/ 12 2 3) => 2)
+      resultStatus: 1
+      duration: 0.0004137
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1101
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((>))]
+      name: EvalCoreLib((>))
+      fullName: UniLispTests.EvalCoreLib((>))
+      resultStatus: 1
+      duration: 0.0455064
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1102
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((>
+        1))]
+      name: EvalCoreLib((> 1))
+      fullName: UniLispTests.EvalCoreLib((> 1))
+      resultStatus: 1
+      duration: 0.045487
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1103
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((>
+        1 2) => #f)]
+      name: EvalCoreLib((> 1 2) => #f)
+      fullName: UniLispTests.EvalCoreLib((> 1 2) => #f)
+      resultStatus: 1
+      duration: 0.0003311
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1104
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((>
+        2 1) => #t)]
+      name: EvalCoreLib((> 2 1) => #t)
+      fullName: UniLispTests.EvalCoreLib((> 2 1) => #t)
+      resultStatus: 1
+      duration: 0.000215
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1105
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((>
+        2 2) => #f)]
+      name: EvalCoreLib((> 2 2) => #f)
+      fullName: UniLispTests.EvalCoreLib((> 2 2) => #f)
+      resultStatus: 1
+      duration: 0.0002126
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1106
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((<))]
+      name: EvalCoreLib((<))
+      fullName: UniLispTests.EvalCoreLib((<))
+      resultStatus: 1
+      duration: 0.045805
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1107
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((<
+        1))]
+      name: EvalCoreLib((< 1))
+      fullName: UniLispTests.EvalCoreLib((< 1))
+      resultStatus: 1
+      duration: 0.0455261
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1108
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((<
+        1 2) => #t)]
+      name: EvalCoreLib((< 1 2) => #t)
+      fullName: UniLispTests.EvalCoreLib((< 1 2) => #t)
+      resultStatus: 1
+      duration: 0.0003206
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1109
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((<
+        2 1) => #f)]
+      name: EvalCoreLib((< 2 1) => #f)
+      fullName: UniLispTests.EvalCoreLib((< 2 1) => #f)
+      resultStatus: 1
+      duration: 0.0002456
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1110
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((<
+        2 2) => #f)]
+      name: EvalCoreLib((< 2 2) => #f)
+      fullName: UniLispTests.EvalCoreLib((< 2 2) => #f)
+      resultStatus: 1
+      duration: 0.0002072
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1111
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((<=))]
+      name: EvalCoreLib((<=))
+      fullName: UniLispTests.EvalCoreLib((<=))
+      resultStatus: 1
+      duration: 0.0449789
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1112
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((<=
+        1))]
+      name: EvalCoreLib((<= 1))
+      fullName: UniLispTests.EvalCoreLib((<= 1))
+      resultStatus: 1
+      duration: 0.0451185
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1113
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((<=
+        1 2) => #t)]
+      name: EvalCoreLib((<= 1 2) => #t)
+      fullName: UniLispTests.EvalCoreLib((<= 1 2) => #t)
+      resultStatus: 1
+      duration: 0.0003267
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1114
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((<=
+        2 1) => #f)]
+      name: EvalCoreLib((<= 2 1) => #f)
+      fullName: UniLispTests.EvalCoreLib((<= 2 1) => #f)
+      resultStatus: 1
+      duration: 0.0002163
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1115
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((<=
+        2 2) => #t)]
+      name: EvalCoreLib((<= 2 2) => #t)
+      fullName: UniLispTests.EvalCoreLib((<= 2 2) => #t)
+      resultStatus: 1
+      duration: 0.000208
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1116
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((>=))]
+      name: EvalCoreLib((>=))
+      fullName: UniLispTests.EvalCoreLib((>=))
+      resultStatus: 1
+      duration: 0.046217
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1117
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((>=
+        1))]
+      name: EvalCoreLib((>= 1))
+      fullName: UniLispTests.EvalCoreLib((>= 1))
+      resultStatus: 1
+      duration: 0.0456378
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1118
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((>=
+        1 2) => #f)]
+      name: EvalCoreLib((>= 1 2) => #f)
+      fullName: UniLispTests.EvalCoreLib((>= 1 2) => #f)
+      resultStatus: 1
+      duration: 0.0003384
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1119
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((>=
+        2 1) => #t)]
+      name: EvalCoreLib((>= 2 1) => #t)
+      fullName: UniLispTests.EvalCoreLib((>= 2 1) => #t)
+      resultStatus: 1
+      duration: 0.0002166
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1120
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((>=
+        2 2) => #t)]
+      name: EvalCoreLib((>= 2 2) => #t)
+      fullName: UniLispTests.EvalCoreLib((>= 2 2) => #t)
+      resultStatus: 1
+      duration: 0.0002151
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1121
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((=))]
+      name: EvalCoreLib((=))
+      fullName: UniLispTests.EvalCoreLib((=))
+      resultStatus: 1
+      duration: 0.045584
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1122
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((equal?
+        1))]
+      name: EvalCoreLib((equal? 1))
+      fullName: UniLispTests.EvalCoreLib((equal? 1))
+      resultStatus: 1
+      duration: 0.0456353
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1123
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((equal?
+        1 #f))]
+      name: EvalCoreLib((equal? 1 #f))
+      fullName: UniLispTests.EvalCoreLib((equal? 1 #f))
+      resultStatus: 1
+      duration: 0.0476677
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1124
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((=
+        1 2) => #f)]
+      name: EvalCoreLib((= 1 2) => #f)
+      fullName: UniLispTests.EvalCoreLib((= 1 2) => #f)
+      resultStatus: 1
+      duration: 0.0004406
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1125
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((=
+        2 2) => #t)]
+      name: EvalCoreLib((= 2 2) => #t)
+      fullName: UniLispTests.EvalCoreLib((= 2 2) => #t)
+      resultStatus: 1
+      duration: 0.000213
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1126
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((eq?))]
+      name: EvalCoreLib((eq?))
+      fullName: UniLispTests.EvalCoreLib((eq?))
+      resultStatus: 1
+      duration: 0.0451598
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1127
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((eq?
+        1))]
+      name: EvalCoreLib((eq? 1))
+      fullName: UniLispTests.EvalCoreLib((eq? 1))
+      resultStatus: 1
+      duration: 0.0453511
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1128
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((eq?
+        1 #f) => #f)]
+      name: EvalCoreLib((eq? 1 #f) => #f)
+      fullName: UniLispTests.EvalCoreLib((eq? 1 #f) => #f)
+      resultStatus: 1
+      duration: 0.0003153
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1129
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((eq?
+        1 1) => #t)]
+      name: EvalCoreLib((eq? 1 1) => #t)
+      fullName: UniLispTests.EvalCoreLib((eq? 1 1) => #t)
+      resultStatus: 1
+      duration: 0.0002265
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1130
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((eq?
+        1 2) => #f)]
+      name: EvalCoreLib((eq? 1 2) => #f)
+      fullName: UniLispTests.EvalCoreLib((eq? 1 2) => #f)
+      resultStatus: 1
+      duration: 0.0002143
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1131
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((eq?
+        "ping" "ping") => #f)]
+      name: EvalCoreLib((eq? "ping" "ping") => #f)
+      fullName: UniLispTests.EvalCoreLib((eq? "ping" "ping") => #f)
+      resultStatus: 1
+      duration: 0.0002125
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1132
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((eq?
+        'ping 'ping) => #t)]
+      name: EvalCoreLib((eq? 'ping 'ping) => #t)
+      fullName: UniLispTests.EvalCoreLib((eq? 'ping 'ping) => #t)
+      resultStatus: 1
+      duration: 0.0002253
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1133
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((eq?
+        'ping 'pong) => #f)]
+      name: EvalCoreLib((eq? 'ping 'pong) => #f)
+      fullName: UniLispTests.EvalCoreLib((eq? 'ping 'pong) => #f)
+      resultStatus: 1
+      duration: 0.0002235
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1134
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((list)
+        => ())]
+      name: EvalCoreLib((list) => ())
+      fullName: UniLispTests.EvalCoreLib((list) => ())
+      resultStatus: 1
+      duration: 0.0010899
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1135
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((list
+        1) => (1))]
+      name: EvalCoreLib((list 1) => (1))
+      fullName: UniLispTests.EvalCoreLib((list 1) => (1))
+      resultStatus: 1
+      duration: 0.0002865
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1136
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((list
+        1 #t) => (1 #t))]
+      name: EvalCoreLib((list 1 #t) => (1 #t))
+      fullName: UniLispTests.EvalCoreLib((list 1 #t) => (1 #t))
+      resultStatus: 1
+      duration: 0.000221
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1137
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((list
+        1 #t "pin") => (1 #t "pin"))]
+      name: EvalCoreLib((list 1 #t "pin") => (1 #t "pin"))
+      fullName: UniLispTests.EvalCoreLib((list 1 #t "pin") => (1 #t "pin"))
+      resultStatus: 1
+      duration: 0.0002219
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1138
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((list
+        1 '(#t 2) "pin") => (1 (#t 2) "pin"))]
+      name: EvalCoreLib((list 1 '(#t 2) "pin") => (1 (#t 2) "pin"))
+      fullName: UniLispTests.EvalCoreLib((list 1 '(#t 2) "pin") => (1 (#t 2) "pin"))
+      resultStatus: 1
+      duration: 0.0002427
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1139
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((cons))]
+      name: EvalCoreLib((cons))
+      fullName: UniLispTests.EvalCoreLib((cons))
+      resultStatus: 1
+      duration: 0.045562
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1140
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((cons
+        1))]
+      name: EvalCoreLib((cons 1))
+      fullName: UniLispTests.EvalCoreLib((cons 1))
+      resultStatus: 1
+      duration: 0.0457763
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1141
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((cons
+        1 2))]
+      name: EvalCoreLib((cons 1 2))
+      fullName: UniLispTests.EvalCoreLib((cons 1 2))
+      resultStatus: 1
+      duration: 0.0462199
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1142
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((cons
+        1 '(2)) => (1 2))]
+      name: EvalCoreLib((cons 1 '(2)) => (1 2))
+      fullName: UniLispTests.EvalCoreLib((cons 1 '(2)) => (1 2))
+      resultStatus: 1
+      duration: 0.000566
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1143
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((append))]
+      name: EvalCoreLib((append))
+      fullName: UniLispTests.EvalCoreLib((append))
+      resultStatus: 1
+      duration: 0.0462306
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1144
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((append
+        1))]
+      name: EvalCoreLib((append 1))
+      fullName: UniLispTests.EvalCoreLib((append 1))
+      resultStatus: 1
+      duration: 0.0460744
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1145
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((append
+        '(1) 2))]
+      name: EvalCoreLib((append '(1) 2))
+      fullName: UniLispTests.EvalCoreLib((append '(1) 2))
+      resultStatus: 1
+      duration: 0.0465683
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1146
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((append
+        '(1) '(2)) => (1 2))]
+      name: EvalCoreLib((append '(1) '(2)) => (1 2))
+      fullName: UniLispTests.EvalCoreLib((append '(1) '(2)) => (1 2))
+      resultStatus: 1
+      duration: 0.0003704
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1147
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((append
+        '(1) '(2) '(3 4 5)) => (1 2 3 4 5))]
+      name: EvalCoreLib((append '(1) '(2) '(3 4 5)) => (1 2 3 4 5))
+      fullName: UniLispTests.EvalCoreLib((append '(1) '(2) '(3 4 5)) => (1 2 3 4
+        5))
+      resultStatus: 1
+      duration: 0.000807
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1148
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((length))]
+      name: EvalCoreLib((length))
+      fullName: UniLispTests.EvalCoreLib((length))
+      resultStatus: 1
+      duration: 0.045605
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1149
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((length
+        1))]
+      name: EvalCoreLib((length 1))
+      fullName: UniLispTests.EvalCoreLib((length 1))
+      resultStatus: 1
+      duration: 0.0460617
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1150
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((length
+        '(1)) => 1)]
+      name: EvalCoreLib((length '(1)) => 1)
+      fullName: UniLispTests.EvalCoreLib((length '(1)) => 1)
+      resultStatus: 1
+      duration: 0.000332
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1151
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((length
+        '(1 4 5)) => 3)]
+      name: EvalCoreLib((length '(1 4 5)) => 3)
+      fullName: UniLispTests.EvalCoreLib((length '(1 4 5)) => 3)
+      resultStatus: 1
+      duration: 0.0002389
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1152
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((eval
+        '(1 4 5)))]
+      name: EvalCoreLib((eval '(1 4 5)))
+      fullName: UniLispTests.EvalCoreLib((eval '(1 4 5)))
+      resultStatus: 1
+      duration: 0.0521662
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1157
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1153
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((eval
+        '(begin '(1 2 3))) => (1 2 3))]
+      name: EvalCoreLib((eval '(begin '(1 2 3))) => (1 2 3))
+      fullName: UniLispTests.EvalCoreLib((eval '(begin '(1 2 3))) => (1 2 3))
+      resultStatus: 1
+      duration: 0.0003674
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1157
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1153
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((eval
+        (+ 1 4 5)) => 10)]
+      name: EvalCoreLib((eval (+ 1 4 5)) => 10)
+      fullName: UniLispTests.EvalCoreLib((eval (+ 1 4 5)) => 10)
+      resultStatus: 1
+      duration: 0.0002456
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1154
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((eval
+        "ping") => "ping")]
+      name: EvalCoreLib((eval "ping") => "ping")
+      fullName: UniLispTests.EvalCoreLib((eval "ping") => "ping")
+      resultStatus: 1
+      duration: 0.0002767
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1155
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/EvalCoreLib/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib((eval
+        '(+ 1 4 5)) => 10)]
+      name: EvalCoreLib((eval '(+ 1 4 5)) => 10)
+      fullName: UniLispTests.EvalCoreLib((eval '(+ 1 4 5)) => 10)
+      resultStatus: 1
+      duration: 0.0004324
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1156
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.EvalCoreLib][suite]
+    - id: 1083
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ExpandMacro][suite]
+      name: ExpandMacro
+      fullName: UniLispTests.ExpandMacro
+      resultStatus: 1
+      duration: 0.0411175
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: Assembly-CSharp-Editor.dll/[Assembly-CSharp-Editor][UniLispTests][suite]
+    - id: 1068
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ExpandMacro/[Assembly-CSharp-Editor][UniLispTests.ExpandMacro((m)
+        -> (list args))]
+      name: ExpandMacro((m) -> (list args))
+      fullName: UniLispTests.ExpandMacro((m) -> (list args))
+      resultStatus: 1
+      duration: 0.0250217
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1069
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ExpandMacro][suite]
+    - id: 1069
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ExpandMacro/[Assembly-CSharp-Editor][UniLispTests.ExpandMacro((m)
+        -> (1 2 3 4))]
+      name: ExpandMacro((m) -> (1 2 3 4))
+      fullName: UniLispTests.ExpandMacro((m) -> (1 2 3 4))
+      resultStatus: 1
+      duration: 0.0006299
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1070
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ExpandMacro][suite]
+    - id: 1070
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ExpandMacro/[Assembly-CSharp-Editor][UniLispTests.ExpandMacro((m
+        'something) -> "this is true")]
+      name: ExpandMacro((m 'something) -> "this is true")
+      fullName: UniLispTests.ExpandMacro((m 'something) -> "this is true")
+      resultStatus: 1
+      duration: 0.0011206
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1072
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ExpandMacro][suite]
+    - id: 1071
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ExpandMacro/[Assembly-CSharp-Editor][UniLispTests.ExpandMacro((m)
+        -> "this is false")]
+      name: ExpandMacro((m) -> "this is false")
+      fullName: UniLispTests.ExpandMacro((m) -> "this is false")
+      resultStatus: 1
+      duration: 0.0004762
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1072
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ExpandMacro][suite]
+    - id: 1021
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.NextToken][suite]
+      name: NextToken
+      fullName: UniLispTests.NextToken
+      resultStatus: 1
+      duration: 0.0087401
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: Assembly-CSharp-Editor.dll/[Assembly-CSharp-Editor][UniLispTests][suite]
+    - id: 1014
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/NextToken/[Assembly-CSharp-Editor][UniLispTests.NextToken(4)]
+      name: NextToken(4)
+      fullName: UniLispTests.NextToken(4)
+      resultStatus: 1
+      duration: 0.0004147
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1021
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.NextToken][suite]
+    - id: 1015
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/NextToken/[Assembly-CSharp-Editor][UniLispTests.NextToken((4
+        5))]
+      name: NextToken((4 5))
+      fullName: UniLispTests.NextToken((4 5))
+      resultStatus: 1
+      duration: 0.0002114
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1021
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.NextToken][suite]
+    - id: 1016
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/NextToken/[Assembly-CSharp-Editor][UniLispTests.NextToken("hello")]
+      name: NextToken("hello")
+      fullName: UniLispTests.NextToken("hello")
+      resultStatus: 1
+      duration: 0.0001972
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1021
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.NextToken][suite]
+    - id: 1017
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/NextToken/[Assembly-CSharp-Editor][UniLispTests.NextToken('hello)]
+      name: NextToken('hello)
+      fullName: UniLispTests.NextToken('hello)
+      resultStatus: 1
+      duration: 0.0001811
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1021
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.NextToken][suite]
+    - id: 1018
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/NextToken/[Assembly-CSharp-Editor][UniLispTests.NextToken(`hello)]
+      name: NextToken(`hello)
+      fullName: UniLispTests.NextToken(`hello)
+      resultStatus: 1
+      duration: 0.0001719
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1021
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.NextToken][suite]
+    - id: 1019
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/NextToken/[Assembly-CSharp-Editor][UniLispTests.NextToken(`,hello)]
+      name: NextToken(`,hello)
+      fullName: UniLispTests.NextToken(`,hello)
+      resultStatus: 1
+      duration: 0.0001809
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1021
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.NextToken][suite]
+    - id: 1020
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/NextToken/[Assembly-CSharp-Editor][UniLispTests.NextToken(4
+        ; hello)]
+      name: NextToken(4 ; hello)
+      fullName: UniLispTests.NextToken(4 ; hello)
+      resultStatus: 1
+      duration: 0.0001676
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1021
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.NextToken][suite]
+    - id: 1067
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+      name: ParseAndExpand
+      fullName: UniLispTests.ParseAndExpand
+      resultStatus: 1
+      duration: 0.4381856
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: Assembly-CSharp-Editor.dll/[Assembly-CSharp-Editor][UniLispTests][suite]
+    - id: 1038
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand(nil)]
+      name: ParseAndExpand(nil)
+      fullName: UniLispTests.ParseAndExpand(nil)
+      resultStatus: 1
+      duration: 0.0008403
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1039
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand(4)]
+      name: ParseAndExpand(4)
+      fullName: UniLispTests.ParseAndExpand(4)
+      resultStatus: 1
+      duration: 0.00023
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1040
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand(4.5)]
+      name: ParseAndExpand(4.5)
+      fullName: UniLispTests.ParseAndExpand(4.5)
+      resultStatus: 1
+      duration: 0.0002542
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1041
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand("hello")]
+      name: ParseAndExpand("hello")
+      fullName: UniLispTests.ParseAndExpand("hello")
+      resultStatus: 1
+      duration: 0.0004777
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1042
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand(#t)]
+      name: ParseAndExpand(#t)
+      fullName: UniLispTests.ParseAndExpand(#t)
+      resultStatus: 1
+      duration: 0.0004652
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1043
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand(#f)]
+      name: ParseAndExpand(#f)
+      fullName: UniLispTests.ParseAndExpand(#f)
+      resultStatus: 1
+      duration: 0.0002523
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1044
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand(ping)]
+      name: ParseAndExpand(ping)
+      fullName: UniLispTests.ParseAndExpand(ping)
+      resultStatus: 1
+      duration: 0.0002042
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1045
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((3
+        "hello" #t))]
+      name: ParseAndExpand((3 "hello" #t))
+      fullName: UniLispTests.ParseAndExpand((3 "hello" #t))
+      resultStatus: 1
+      duration: 0.0002326
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1046
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((3
+        ("hello" "world" 69) #t))]
+      name: ParseAndExpand((3 ("hello" "world" 69) #t))
+      fullName: UniLispTests.ParseAndExpand((3 ("hello" "world" 69) #t))
+      resultStatus: 1
+      duration: 0.0002493
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1047
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand('ping
+        => (quote ping))]
+      name: ParseAndExpand('ping => (quote ping))
+      fullName: UniLispTests.ParseAndExpand('ping => (quote ping))
+      resultStatus: 1
+      duration: 0.0002027
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1048
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand(`ping
+        => (quote ping))]
+      name: ParseAndExpand(`ping => (quote ping))
+      fullName: UniLispTests.ParseAndExpand(`ping => (quote ping))
+      resultStatus: 1
+      duration: 0.0007677
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1049
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((if
+        #t 'ping `pong) => (if #t (quote ping) (quasiquote pong)))]
+      name: ParseAndExpand((if #t 'ping `pong) => (if #t (quote ping) (quasiquote
+        pong)))
+      fullName: UniLispTests.ParseAndExpand((if #t 'ping `pong) => (if #t (quote
+        ping) (quasiquote pong)))
+      resultStatus: 1
+      duration: 0.000243
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1050
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand(`(testing1
+        ,@L testing2) => (cons (quote testing1) (append L (cons (quote testing2)
+        (quote ())))))]
+      name: ParseAndExpand(`(testing1 ,@L testing2) => (cons (quote testing1) (append
+        L (cons (quote testing2) (quote ())))))
+      fullName: UniLispTests.ParseAndExpand(`(testing1 ,@L testing2) => (cons (quote
+        testing1) (append L (cons (quote testing2) (quote ())))))
+      resultStatus: 1
+      duration: 0.0002745
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1051
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand(`(testing1
+        ,L testing2) => (cons (quote testing1) (cons L (cons (quote testing2) (quote
+        ())))))]
+      name: ParseAndExpand(`(testing1 ,L testing2) => (cons (quote testing1) (cons
+        L (cons (quote testing2) (quote ())))))
+      fullName: UniLispTests.ParseAndExpand(`(testing1 ,L testing2) => (cons (quote
+        testing1) (cons L (cons (quote testing2) (quote ())))))
+      resultStatus: 1
+      duration: 0.0002501
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1052
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand(())]
+      name: ParseAndExpand(())
+      fullName: UniLispTests.ParseAndExpand(())
+      resultStatus: 1
+      duration: 0.0456217
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1053
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((set!
+        x))]
+      name: ParseAndExpand((set! x))
+      fullName: UniLispTests.ParseAndExpand((set! x))
+      resultStatus: 1
+      duration: 0.0456582
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1054
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((define
+        3 4))]
+      name: ParseAndExpand((define 3 4))
+      fullName: UniLispTests.ParseAndExpand((define 3 4))
+      resultStatus: 1
+      duration: 0.0447421
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1055
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((quote
+        3 4))]
+      name: ParseAndExpand((quote 3 4))
+      fullName: UniLispTests.ParseAndExpand((quote 3 4))
+      resultStatus: 1
+      duration: 0.0564506
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1056
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((if
+        1 2 3 4))]
+      name: ParseAndExpand((if 1 2 3 4))
+      fullName: UniLispTests.ParseAndExpand((if 1 2 3 4))
+      resultStatus: 1
+      duration: 0.045579
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1057
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((lambda
+        3 3))]
+      name: ParseAndExpand((lambda 3 3))
+      fullName: UniLispTests.ParseAndExpand((lambda 3 3))
+      resultStatus: 1
+      duration: 0.0448395
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1058
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((lambda
+        (x))]
+      name: ParseAndExpand((lambda (x))
+      fullName: UniLispTests.ParseAndExpand((lambda (x))
+      resultStatus: 1
+      duration: 0.0442182
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1059
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((if
+        (= 1 2) (define-macro a 'a) (define-macro a 'b)))]
+      name: ParseAndExpand((if (= 1 2) (define-macro a 'a) (define-macro a 'b)))
+      fullName: UniLispTests.ParseAndExpand((if (= 1 2) (define-macro a 'a) (define-macro
+        a 'b)))
+      resultStatus: 1
+      duration: 0.0449047
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1060
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((define
+        (twice x) (* x x))]
+      name: ParseAndExpand((define (twice x) (* x x))
+      fullName: UniLispTests.ParseAndExpand((define (twice x) (* x x))
+      resultStatus: 1
+      duration: 0.0440834
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1061
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((if
+        #t 'ping 'pong) => (if #t (quote ping) (quote pong)))]
+      name: ParseAndExpand((if #t 'ping 'pong) => (if #t (quote ping) (quote pong)))
+      fullName: UniLispTests.ParseAndExpand((if #t 'ping 'pong) => (if #t (quote
+        ping) (quote pong)))
+      resultStatus: 1
+      duration: 0.0003575
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1062
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((if
+        #t 'ping) => (if #t (quote ping) nil))]
+      name: ParseAndExpand((if #t 'ping) => (if #t (quote ping) nil))
+      fullName: UniLispTests.ParseAndExpand((if #t 'ping) => (if #t (quote ping)
+        nil))
+      resultStatus: 1
+      duration: 0.0002533
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1063
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((begin)
+        => nil)]
+      name: ParseAndExpand((begin) => nil)
+      fullName: UniLispTests.ParseAndExpand((begin) => nil)
+      resultStatus: 1
+      duration: 0.0002068
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1064
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((begin
+        1 2 (if #t 'ping)) => (begin 1 2 (if #t (quote ping) nil)))]
+      name: ParseAndExpand((begin 1 2 (if #t 'ping)) => (begin 1 2 (if #t (quote
+        ping) nil)))
+      fullName: UniLispTests.ParseAndExpand((begin 1 2 (if #t 'ping)) => (begin 1
+        2 (if #t (quote ping) nil)))
+      resultStatus: 1
+      duration: 0.0003224
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1065
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((define
+        (twice x) (* x x)) => (define twice (lambda (x) (* x x))))]
+      name: ParseAndExpand((define (twice x) (* x x)) => (define twice (lambda (x)
+        (* x x))))
+      fullName: UniLispTests.ParseAndExpand((define (twice x) (* x x)) => (define
+        twice (lambda (x) (* x x))))
+      resultStatus: 1
+      duration: 0.0002905
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1066
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ParseAndExpand/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand((func
+        'ping 'pong) => (func (quote ping) (quote pong)))]
+      name: ParseAndExpand((func 'ping 'pong) => (func (quote ping) (quote pong)))
+      fullName: UniLispTests.ParseAndExpand((func 'ping 'pong) => (func (quote ping)
+        (quote pong)))
+      resultStatus: 1
+      duration: 0.0002421
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ParseAndExpand][suite]
+    - id: 1037
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ReadExpression][suite]
+      name: ReadExpression
+      fullName: UniLispTests.ReadExpression
+      resultStatus: 1
+      duration: 0.0559629
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: Assembly-CSharp-Editor.dll/[Assembly-CSharp-Editor][UniLispTests][suite]
+    - id: 1022
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ReadExpression/[Assembly-CSharp-Editor][UniLispTests.ReadExpression(nil)]
+      name: ReadExpression(nil)
+      fullName: UniLispTests.ReadExpression(nil)
+      resultStatus: 1
+      duration: 0.0006054
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ReadExpression][suite]
+    - id: 1023
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ReadExpression/[Assembly-CSharp-Editor][UniLispTests.ReadExpression(4)]
+      name: ReadExpression(4)
+      fullName: UniLispTests.ReadExpression(4)
+      resultStatus: 1
+      duration: 0.0002209
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ReadExpression][suite]
+    - id: 1024
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ReadExpression/[Assembly-CSharp-Editor][UniLispTests.ReadExpression(4.5)]
+      name: ReadExpression(4.5)
+      fullName: UniLispTests.ReadExpression(4.5)
+      resultStatus: 1
+      duration: 0.0001982
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ReadExpression][suite]
+    - id: 1025
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ReadExpression/[Assembly-CSharp-Editor][UniLispTests.ReadExpression("hello")]
+      name: ReadExpression("hello")
+      fullName: UniLispTests.ReadExpression("hello")
+      resultStatus: 1
+      duration: 0.0001982
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ReadExpression][suite]
+    - id: 1026
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ReadExpression/[Assembly-CSharp-Editor][UniLispTests.ReadExpression(#t)]
+      name: ReadExpression(#t)
+      fullName: UniLispTests.ReadExpression(#t)
+      resultStatus: 1
+      duration: 0.0001883
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ReadExpression][suite]
+    - id: 1027
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ReadExpression/[Assembly-CSharp-Editor][UniLispTests.ReadExpression(#f)]
+      name: ReadExpression(#f)
+      fullName: UniLispTests.ReadExpression(#f)
+      resultStatus: 1
+      duration: 0.0001905
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ReadExpression][suite]
+    - id: 1028
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ReadExpression/[Assembly-CSharp-Editor][UniLispTests.ReadExpression(ping)]
+      name: ReadExpression(ping)
+      fullName: UniLispTests.ReadExpression(ping)
+      resultStatus: 1
+      duration: 0.0001898
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ReadExpression][suite]
+    - id: 1029
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ReadExpression/[Assembly-CSharp-Editor][UniLispTests.ReadExpression((3
+        "hello" #t))]
+      name: ReadExpression((3 "hello" #t))
+      fullName: UniLispTests.ReadExpression((3 "hello" #t))
+      resultStatus: 1
+      duration: 0.0002233
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ReadExpression][suite]
+    - id: 1030
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ReadExpression/[Assembly-CSharp-Editor][UniLispTests.ReadExpression((3
+        ("hello" "world" 69) #t))]
+      name: ReadExpression((3 ("hello" "world" 69) #t))
+      fullName: UniLispTests.ReadExpression((3 ("hello" "world" 69) #t))
+      resultStatus: 1
+      duration: 0.000733
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ReadExpression][suite]
+    - id: 1031
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ReadExpression/[Assembly-CSharp-Editor][UniLispTests.ReadExpression('ping
+        => (quote ping))]
+      name: ReadExpression('ping => (quote ping))
+      fullName: UniLispTests.ReadExpression('ping => (quote ping))
+      resultStatus: 1
+      duration: 0.0002151
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ReadExpression][suite]
+    - id: 1032
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ReadExpression/[Assembly-CSharp-Editor][UniLispTests.ReadExpression(`ping
+        => (quasiquote ping))]
+      name: ReadExpression(`ping => (quasiquote ping))
+      fullName: UniLispTests.ReadExpression(`ping => (quasiquote ping))
+      resultStatus: 1
+      duration: 0.0002044
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ReadExpression][suite]
+    - id: 1033
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ReadExpression/[Assembly-CSharp-Editor][UniLispTests.ReadExpression((if
+        #t 'ping `pong) => (if #t (quote ping) (quasiquote pong)))]
+      name: ReadExpression((if #t 'ping `pong) => (if #t (quote ping) (quasiquote
+        pong)))
+      fullName: UniLispTests.ReadExpression((if #t 'ping `pong) => (if #t (quote
+        ping) (quasiquote pong)))
+      resultStatus: 1
+      duration: 0.0002402
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ReadExpression][suite]
+    - id: 1034
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ReadExpression/[Assembly-CSharp-Editor][UniLispTests.ReadExpression(`(testing1
+        ,@L testing2) => (quasiquote (testing1 (unquote-splicing L) testing2)))]
+      name: ReadExpression(`(testing1 ,@L testing2) => (quasiquote (testing1 (unquote-splicing
+        L) testing2)))
+      fullName: UniLispTests.ReadExpression(`(testing1 ,@L testing2) => (quasiquote
+        (testing1 (unquote-splicing L) testing2)))
+      resultStatus: 1
+      duration: 0.000239
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ReadExpression][suite]
+    - id: 1035
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ReadExpression/[Assembly-CSharp-Editor][UniLispTests.ReadExpression(`(testing1
+        ,L testing2) => (quasiquote (testing1 (unquote L) testing2)))]
+      name: ReadExpression(`(testing1 ,L testing2) => (quasiquote (testing1 (unquote
+        L) testing2)))
+      fullName: UniLispTests.ReadExpression(`(testing1 ,L testing2) => (quasiquote
+        (testing1 (unquote L) testing2)))
+      resultStatus: 1
+      duration: 0.0002389
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ReadExpression][suite]
+    - id: 1036
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/ReadExpression/[Assembly-CSharp-Editor][UniLispTests.ReadExpression())]
+      name: ReadExpression())
+      fullName: UniLispTests.ReadExpression())
+      resultStatus: 1
+      duration: 0.0455086
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1037
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.ReadExpression][suite]
+    - id: 1013
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Stringify][suite]
+      name: Stringify
+      fullName: UniLispTests.Stringify
+      resultStatus: 1
+      duration: 0.0065576
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1001
+      parentUniqueId: Assembly-CSharp-Editor.dll/[Assembly-CSharp-Editor][UniLispTests][suite]
+    - id: 1004
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Stringify/[Assembly-CSharp-Editor][UniLispTests.Stringify(nil)]
+      name: Stringify(nil)
+      fullName: UniLispTests.Stringify(nil)
+      resultStatus: 1
+      duration: 0.000296
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Stringify][suite]
+    - id: 1005
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Stringify/[Assembly-CSharp-Editor][UniLispTests.Stringify(4)]
+      name: Stringify(4)
+      fullName: UniLispTests.Stringify(4)
+      resultStatus: 1
+      duration: 0.0001383
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Stringify][suite]
+    - id: 1006
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Stringify/[Assembly-CSharp-Editor][UniLispTests.Stringify(4.5)]
+      name: Stringify(4.5)
+      fullName: UniLispTests.Stringify(4.5)
+      resultStatus: 1
+      duration: 0.00012
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Stringify][suite]
+    - id: 1007
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Stringify/[Assembly-CSharp-Editor][UniLispTests.Stringify("hello")]
+      name: Stringify("hello")
+      fullName: UniLispTests.Stringify("hello")
+      resultStatus: 1
+      duration: 0.0008734
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Stringify][suite]
+    - id: 1008
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Stringify/[Assembly-CSharp-Editor][UniLispTests.Stringify(#t)]
+      name: Stringify(#t)
+      fullName: UniLispTests.Stringify(#t)
+      resultStatus: 1
+      duration: 0.0001193
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Stringify][suite]
+    - id: 1009
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Stringify/[Assembly-CSharp-Editor][UniLispTests.Stringify(#f)]
+      name: Stringify(#f)
+      fullName: UniLispTests.Stringify(#f)
+      resultStatus: 1
+      duration: 0.000114
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Stringify][suite]
+    - id: 1010
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Stringify/[Assembly-CSharp-Editor][UniLispTests.Stringify(ping)]
+      name: Stringify(ping)
+      fullName: UniLispTests.Stringify(ping)
+      resultStatus: 1
+      duration: 0.0001149
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Stringify][suite]
+    - id: 1011
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Stringify/[Assembly-CSharp-Editor][UniLispTests.Stringify((3
+        "hello" #t))]
+      name: Stringify((3 "hello" #t))
+      fullName: UniLispTests.Stringify((3 "hello" #t))
+      resultStatus: 1
+      duration: 0.0001256
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Stringify][suite]
+    - id: 1012
+      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/Stringify/[Assembly-CSharp-Editor][UniLispTests.Stringify((3
+        ("hello" "world" 69) #t))]
+      name: Stringify((3 ("hello" "world" 69) #t))
+      fullName: UniLispTests.Stringify((3 ("hello" "world" 69) #t))
+      resultStatus: 1
+      duration: 0.0001239
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.Stringify][suite]
     - id: 1004
       uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.UniLispTestsSimplePasses]
       name: UniLispTestsSimplePasses
       fullName: UniLispTests.UniLispTestsSimplePasses
       resultStatus: 1
-      duration: 0.0054887
+      duration: 0.0003235
       messages: 
       output: 
       stacktrace: 
@@ -450,30 +3316,14 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1003
       parentUniqueId: Assembly-CSharp-Editor.dll/[Assembly-CSharp-Editor][UniLispTests][suite]
-    - id: 1005
-      uniqueId: Assembly-CSharp-Editor.dll/UniLispTests/[Assembly-CSharp-Editor][UniLispTests.UniLispTestsWithEnumeratorPasses]
-      name: UniLispTestsWithEnumeratorPasses
-      fullName: UniLispTests.UniLispTestsWithEnumeratorPasses
-      resultStatus: 1
-      duration: 0.0050814
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1003
-      parentUniqueId: Assembly-CSharp-Editor.dll/[Assembly-CSharp-Editor][UniLispTests][suite]
-    m_ResultText: UniLispTests (0.024s)
+    m_ResultText: Eval((begin (define fib (lambda (n) (if (<= 2 n) (+ (fib (- n 1))
+      (fib (- n 2))) n ))) (fib 10)) => 55) (0.041s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0ee75434
-      m_LastClickedID: 877979406
-      m_ExpandedIDs: 90da1d310ee754348056273affffff7f
+      m_SelectedIDs: 2709ad70
+      m_LastClickedID: 1890388263
+      m_ExpandedIDs: ee71958290da1d310ee754348056273af2684c6affffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -519,10 +3369,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 634
-    width: 1465
-    height: 365
+    x: 1929
+    y: 552
+    width: 1074
+    height: 299
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -540,22 +3390,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Editor/Tests
+    - Packages/unilisp/Editor
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Editor/Tests
+  - Packages/unilisp/Editor
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\work\code\UniLisp\projects\UniLispExamples
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f4a40000
-    m_LastClickedID: 42228
-    m_ExpandedIDs: 00000000fe8f0000249000005890000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 282}
+    m_SelectedIDs: be5d0000
+    m_LastClickedID: 23998
+    m_ExpandedIDs: 00000000765d0000785d0000a05d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -608,8 +3458,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: d05d0000
+    m_LastClickedInstanceID: 24016
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -659,10 +3509,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1466
-    y: 73
-    width: 453
-    height: 926
+    x: 3092
+    y: 115
+    width: 336
+    height: 732
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -700,10 +3550,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 73
-    width: 362
-    height: 540
+    x: 2017
+    y: 115
+    width: 256
+    height: 412
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -711,9 +3561,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: d05d0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 60aaffffaeaaffffeab6ffff98b9ffffd0b9ffff3abbffff48bbffff9ebbffff60c5ffff
+      m_ExpandedIDs: eca2ffff34a3ffff84a4ffffcca4ffffa6a5ffffeea5ffffd0a6ffff18a7ffff54a7ffff9ca7ffff9aa8ffffeea8ffff86aaffffceaaffff0aabffff52abffff2cacffff74acffff4eadffff96adffff70aeffffb8aeffff92afffffdaafffff4cb1ffff94b1ffff7cb6ffff1cb9ffff58b9ffffa0b9ffff38bbffff80bbffff5abcffffa2bcffff86c1ffffeec2ffff2ac3ffff72c3ffffaec3fffff6c3ffffcec4ffff16c5ffff52c5ffff9ac5ffffd6c5ffff1ec6fffff6c6ffff3ec7ffff7ac7ffffc2c7ffff9cc8ffffe4c8ffff20c9ffff68c9ffff40caffff88caffffc4caffff0ccbffff7eccffffc6ccffff9ecdffffe6cdffff22ceffff6aceffffa6ceffffeeceffffc6cfffff0ed0ffff4ad0ffff92d0ffffced0ffff16d1ffff52d1ffff9ad1ffffd6d1ffff1ed2ffff5ad2ffffa2d2ffffded2ffff26d3ffff62d3ffffaad3ffffb4d4fffffcd4ffff38d5ffff80d5ffff5ad6ffffa2d6ffffded6ffff26d7ffff62d7ffffaad7ffff82d8ffffcad8ffff06d9ffff4ed9ffff26daffff6edaffff04dcffff68ddffffa4ddffff24deffffb6eafffffeeaffff3aebffff82ebffffbeebffff06ecffff42ecffff8aecffff7aedffffc2edffffdef6ffff26f7ffff56f9ffffa0f9ffff22fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1193,10 +4043,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2249
-    y: 726.5
-    width: 920
-    height: 250
+    x: 2017
+    y: 548
+    width: 1074
+    height: 299
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

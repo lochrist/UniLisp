@@ -114,7 +114,8 @@ namespace UniLisp
                 case LispType.String:
                     return $"\"{(string)obj.objValue}\"";
                 case LispType.Procedure:
-                    break;
+                    var proc = (Procedure)obj.objValue;
+                    return proc.IsCallable ? "Native function" : "function";
                 case LispType.List:
                     var values = string.Join(' ', obj.listValue.Select(v => Stringigy(v)));
                     return $"({values})";
@@ -243,6 +244,8 @@ namespace UniLisp
         Env m_Outer;
         Dictionary<string, LispValue> m_Values = new Dictionary<string, LispValue>();
 
+        public IEnumerable<KeyValuePair<string, LispValue>> entries => m_Values;
+
         public Env()
         {
         }
@@ -300,10 +303,15 @@ namespace UniLisp
             func = f;
         }
 
-        public LispValue Invoke(LispContext ctx, LispValue args)
+        public LispValue InvokeCallable(LispContext ctx, LispValue args)
         {
             var argList = args.type == LispType.List ? args.listValue : new List<LispValue>() { args };
             return func(ctx, argList);
+        }
+
+        public LispValue EvalExpr(LispContext ctx, LispValue args)
+        {
+            return ctx.Eval(expr, new Env(parameters, args, env));
         }
     }
 
@@ -327,6 +335,9 @@ namespace UniLisp
         LispValue unquotesplicing;
         LispValue append;
         LispValue cons;
+
+        // public IEnumerable<KeyValuePair<string, LispValue>> globalEntries => m_GlobalEnv.entries;
+        public IEnumerable<KeyValuePair<string, LispValue>> globalEntries => m_GlobalEnv.entries;
 
         public LispContext()
         {
@@ -365,8 +376,14 @@ namespace UniLisp
         public LispValue Parse(InPort inport)
         {
             var expr = ReadExpression(inport);
-            var expandedExpr = Expand(expr);
+            var expandedExpr = Expand(expr, true);
             return expandedExpr;
+        }
+
+        public LispValue Eval(string content, Env env = null)
+        {
+            var expr = Parse(content);
+            return Eval(expr, env);
         }
 
         public LispValue Eval(LispValue expr, Env env = null)
@@ -438,10 +455,11 @@ namespace UniLisp
                     var evaluatedArguments = LispValue.Create(expr.listValue.Skip(1).Select(v => Eval(v, env)).ToList());
                     if (proc.IsCallable)
                     {
-                        return proc.Invoke(this, evaluatedArguments);
+                        return proc.InvokeCallable(this, evaluatedArguments);
                     }
                     else
                     {
+                        // this ensure tail recursion with the while statement above.
                         expr = proc.expr;
                         env = new Env(proc.parameters, evaluatedArguments, proc.env);
                     }
@@ -639,8 +657,11 @@ namespace UniLisp
                         // Define a macro
                         if (!topLevel)
                             throw new LispSyntaxException($"define-macro only allowed at top level {expr}");
-                        // TODO
-                        throw new System.Exception($"TODO!");
+                        var proc = Eval(expanded);
+                        if (proc.type != LispType.Procedure)
+                            throw new LispSyntaxException($"define-macro doesn't expand to a procedure {expanded}");
+                        m_MacroTable[v.ToString()] = proc;
+                        return LispValue.Nil;
                     }
                     else
                     {
@@ -680,10 +701,11 @@ namespace UniLisp
 
             if (expr.listValue[0].type == LispType.Symbol && m_MacroTable.TryGetValue(expr.listValue[0].ToString(), out var macro))
             {
-                // TODO
-                throw new System.Exception($"Call macro to expand it");
-                // expand(macro_table[x[0]](*x[1:]), toplevel) # (m arg...) 
-                // return Expand();
+                var proc = (Procedure)macro.objValue;
+                var args = LispValue.Create(expr.listValue.Skip(1).ToList());
+                var evaluatedMacro = proc.EvalExpr(this, args);
+                var expandedMacro = Expand(evaluatedMacro, topLevel);
+                return expandedMacro;
             }
 
             var lv = expr.listValue.Select(v => Expand(v)).ToList();
@@ -781,6 +803,10 @@ namespace UniLisp
             RegisterProcedure("string?", CoreFunctionBindings.IsString);
             RegisterProcedure("boolean?", CoreFunctionBindings.IsBoolean);
 
+            RegisterProcedure("car", CoreFunctionBindings.Car);
+            RegisterProcedure("first", CoreFunctionBindings.Car);
+            RegisterProcedure("cdr", CoreFunctionBindings.Cdr);
+            RegisterProcedure("rest", CoreFunctionBindings.Cdr);
             RegisterProcedure("list", CoreFunctionBindings.List);
             RegisterProcedure("cons", CoreFunctionBindings.Cons);
             RegisterProcedure("append", CoreFunctionBindings.Append);

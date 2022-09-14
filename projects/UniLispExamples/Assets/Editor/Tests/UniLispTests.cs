@@ -242,6 +242,53 @@ public class UniLispTests
         }
     }
 
+    public class ExpandMacroTestCase
+    {
+        public LispValue value;
+        public string macroDef;
+        public string macroCall;
+        public string expected;
+        public bool shouldThrow;
+
+        public ExpandMacroTestCase(string macroDef, string macroCall, string expected)
+        {
+            this.macroDef = macroDef;
+            this.macroCall = macroCall;
+            this.expected = expected;
+        }
+
+        public override string ToString()
+        {
+            return $"{macroCall} -> {expected}";
+        }
+    }
+
+    static readonly ExpandMacroTestCase[] s_MacroExpandTestCases = new ExpandMacroTestCase[]
+    {
+        new ExpandMacroTestCase("(define-macro m (lambda args '(list args)))", "(m)", "(list args)"),
+        new ExpandMacroTestCase("(define-macro m (lambda args '(1 2 3 4)))", "(m)", "(1 2 3 4)"),
+        new ExpandMacroTestCase("(define-macro m (lambda args (if args \"this is true\" \"this is false\")))", "(m 'something)", "\"this is true\""),
+        new ExpandMacroTestCase("(define-macro m (lambda args (if args \"this is true\" \"this is false\")))", "(m)", "\"this is false\""),
+    };
+
+    [Test]
+    public void ExpandMacro([ValueSource(nameof(s_MacroExpandTestCases))] ExpandMacroTestCase t)
+    {
+        var ctx = new LispContext();
+        ctx.Eval(t.macroDef);
+
+        if (t.shouldThrow)
+        {
+            Assert.Throws<LispSyntaxException>(() => ctx.Parse(t.macroCall));
+        }
+        else
+        {
+            var expr = ctx.Parse(t.macroCall);
+            var exprStr = LispValue.Stringigy(expr);
+            Assert.AreEqual(t.expected, exprStr);
+        }
+    }
+
     static readonly StringifyTestCase[] s_EvalTestCases = new StringifyTestCase[]
     {
         new StringifyTestCase("nil", "nil"),
@@ -264,6 +311,8 @@ public class UniLispTests
         new StringifyTestCase("(begin (set! x 45) x)", "45"),
 
         new StringifyTestCase("(begin (define (twice x) (* 2 x)) (twice 34))", "68"),
+
+        new StringifyTestCase(@"(begin (define fib (lambda (n) (if (<= 2 n) (+ (fib (- n 1)) (fib (- n 2))) n ))) (fib 10))", "55")
     };
 
     static void EvalTest(StringifyTestCase t)
