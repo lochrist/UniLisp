@@ -1,0 +1,12 @@
+projects/UniLispExamples/.vsconfig
+projects/UniLispExamples/Assembly-CSharp.csproj
+projects/UniLispExamples/Assembly-CSharp-Editor.csproj
+projects/UniLispExamples/unilisp.csproj
+projects/UniLispExamples/unilisp.editor.csproj
+projects/UniLispExamples/UniLispExamples.sln
+projects/UniLispExamples/.vs/
+projects/UniLispExamples/Library/AnnotationManager
+projects/UniLispExamples/Library/
+projects/UniLispExamples/Logs/
+projects/UniLispExamples/obj/
+projects/UniLispExamples/Temp/
