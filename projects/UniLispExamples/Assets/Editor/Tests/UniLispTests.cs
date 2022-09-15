@@ -233,6 +233,14 @@ public class UniLispTests
         new StringifyTestCase("(func 'ping 'pong)", "(func (quote ping) (quote pong))"),
 
         new StringifyTestCase("(and (> 2 1) (= 4 4))", "(if (> 2 1) (= 4 4) #f)"),
+
+        new StringifyTestCase("(let)") { shouldThrow = true },
+        new StringifyTestCase("(let x 45)") { shouldThrow = true },
+        new StringifyTestCase("(let (x 45))") { shouldThrow = true },
+        new StringifyTestCase("(let ((x 45)) (+ x x))", "((lambda (x) (+ x x)) 45)"),
+        new StringifyTestCase("(let ((x 45) (y 23) ) (+ x y))", "((lambda (x y) (+ x y)) 45 23)"),
+
+        new StringifyTestCase("(let ((x 'sym) (y 23) ) 'expect (+ 34 y))", "((lambda (x y) (begin (quote expect) (+ 34 y))) (quote sym) 23)"),
     };
 
     [Test]
@@ -326,6 +334,8 @@ public class UniLispTests
         new StringifyTestCase(@"(begin (define fib (lambda (n) (if (<= 2 n) (+ (fib (- n 1)) (fib (- n 2))) n ))) (fib 10))", "55"),
 
         new StringifyTestCase("(begin (begin (define v 34) (set! v (+ v 8)))  v)", "42"),
+
+        new StringifyTestCase("(let ((x 8) (y 34)) (+ x y))", "42"),
     };
 
     static void EvalTest(StringifyTestCase t)

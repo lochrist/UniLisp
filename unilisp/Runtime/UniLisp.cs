@@ -530,6 +530,15 @@ namespace UniLisp
             m_GlobalEnv.Update(name, procValue);
             return procValue;
         }
+
+        public LispValue RegisterMacro(string name, Func<LispContext, List<LispValue>, LispValue> func)
+        {
+            var sym = GetSym(name);
+            var proc = new Procedure(func);
+            var procValue = LispValue.Create(proc);
+            m_MacroTable[name] = procValue;
+            return procValue;
+        }
         #endregion
 
         private LispValue GetSym(string s)
@@ -791,6 +800,25 @@ namespace UniLisp
             return v1.type == LispType.Symbol && v2.type == LispType.Symbol && v1.intValue == v2.intValue;
         }
 
+        private LispValue LetMacro(LispContext ctx, List<LispValue> args)
+        {
+            if (args.Count < 2)
+                throw new LispSyntaxException($"Not enough params for let");
+            var bindings = args[0];
+            if (bindings.type != LispType.List)
+                throw new LispSyntaxException($"let bindings must be a lis {bindings}");
+            var body = args.Skip(1);
+            if (!bindings.listValue.All(b => b.type == LispType.List && b.listValue.Count == 2))
+                throw new LispSyntaxException($"Wrong let bindings format: {bindings}");
+            var vars = LispValue.Create(bindings.listValue.Select(b => b.listValue[0]).ToList());
+            var expandedValues = bindings.listValue.Select(b => Expand(b.listValue[1]));
+            var expandedBodyStatements = body.Select(statement => Expand(statement));
+            return LispValue.CreateList(
+                LispValue.CreateList(lambda, vars, expandedBodyStatements),
+                expandedValues
+                );
+        }
+
         private void InitGlobalEnv()
         {
             RegisterProcedure("+", CoreFunctionBindings.Add);
@@ -830,6 +858,8 @@ namespace UniLisp
 
             RegisterProcedure("#", CoreFunctionBindings.GetAndInvokeNativeFunction);
             RegisterProcedure("get#", CoreFunctionBindings.GetNativeFunction);
+
+            RegisterMacro("let", LetMacro);
 
             var initCode = @"(begin
 (define-macro and (lambda args 
