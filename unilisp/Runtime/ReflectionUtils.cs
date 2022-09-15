@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public static class ReflectionUtils
@@ -73,5 +75,112 @@ public static class ReflectionUtils
         var mi = GetMethodInfo<T, U, V, TResult>(a);
         var d = Delegate.CreateDelegate(typeof(Func<T, U, V, TResult>), mi);
         return d;
+    }
+
+    public static Delegate CreateDelegate(MethodInfo mi)
+    {
+        Type delegateType = null;
+        if (mi.ReturnType == typeof(void))
+        {
+            switch(mi.GetParameters().Length)
+            {
+                case 0:
+                    delegateType = typeof(Action);
+                    break;
+                case 1:
+                    delegateType = typeof(Action<>);
+                    break;
+                case 2:
+                    delegateType = typeof(Action<,>);
+                    break;
+                case 3:
+                    delegateType = typeof(Action<,,>);
+                    break;
+                case 4:
+                    delegateType = typeof(Action<,,,>);
+                    break;
+                default:
+                    throw new UniLisp.LispRuntimeException($"Arity unsupported for {mi.Name}");
+            }
+        }
+        else
+        {
+            switch (mi.GetParameters().Length)
+            {
+                case 0:
+                    delegateType = typeof(Func<>);
+                    break;
+                case 1:
+                    delegateType = typeof(Func<,>);
+                    break;
+                case 2:
+                    delegateType = typeof(Func<,,>);
+                    break;
+                case 3:
+                    delegateType = typeof(Func<,,,>);
+                    break;
+                case 4:
+                    delegateType = typeof(Func<,,,,>);
+                    break;
+                default:
+                    throw new UniLisp.LispRuntimeException($"Arity unsupported for {mi.Name}");
+            }
+        }
+
+        try
+        {
+            return Delegate.CreateDelegate(delegateType, mi);
+        }
+        catch(System.Exception e)
+        {
+            throw new UniLisp.LispRuntimeException($"Cannot create Delegate for {mi.Name}");
+        }
+    }
+
+    private static readonly string[] s_IgnoredAssemblies =
+    {
+        "^UnityScript$", "^System$", "^mscorlib$", "^netstandard$",
+        "^System\\..*", "^nunit\\..*", "^Microsoft\\..*", "^Mono\\..*", "^SyntaxTree\\..*"
+    };
+
+    public static IEnumerable<Assembly> GetValidAssemblies()
+    {
+        var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+        foreach (var assembly in assemblies)
+        {
+            if (IsIgnoredAssembly(assembly.GetName()))
+                continue;
+            yield return assembly;
+        }
+    }
+
+    private static bool IsIgnoredAssembly(AssemblyName assemblyName)
+    {
+        var name = assemblyName.Name;
+        return s_IgnoredAssemblies.Any(candidate => Regex.IsMatch(name, candidate));
+    }
+
+    public static MethodInfo GetFunctionFromAssembly(Assembly assembly, string typeName, string functionName, int arity)
+    {
+        var bindingFlags = BindingFlags.Static | BindingFlags.Public | BindingFlags.DeclaredOnly;
+        var type = assembly.GetType(typeName, false, true);
+        if (type == null)
+            return null;
+        var methods = type.GetMethods(bindingFlags);
+        foreach (var m in methods)
+        {
+            if (m.IsGenericMethod)
+                continue;
+
+            if (m.GetCustomAttribute<ObsoleteAttribute>() != null)
+                continue;
+
+            if (m.Name.Contains("Begin") || m.Name.Contains("End"))
+                continue;
+
+            if (m.Name == functionName && m.GetParameters().Length == arity)
+                return m;
+        }
+        return null;
     }
 }

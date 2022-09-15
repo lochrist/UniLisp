@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using UniLisp;
 using UnityEngine;
 
@@ -195,5 +197,103 @@ public static class CoreFunctionBindings
         }
         
         return LispValue.Create(v1.objValue == v2.objValue);
+    }
+
+    struct DelegateEntry
+    {
+        public Delegate d;
+        public MethodInfo mi;
+        public bool IsValid => d != null;
+    }
+
+    static Dictionary<string, DelegateEntry> s_DelegateCache = new Dictionary<string, DelegateEntry>();
+    private static DelegateEntry TryCreateEntry(string functionName, int functionArity)
+    {
+        var functionNameTokenIndex = functionName.LastIndexOf(".");
+        if (functionNameTokenIndex == -1)
+            throw new LispRuntimeException($"Function name needs to be fully qualified with its type: {functionName}");
+        var typeName = functionName.Substring(0, functionNameTokenIndex);
+        functionName = functionName.Substring(functionNameTokenIndex + 1);
+
+        var assemblies = ReflectionUtils.GetValidAssemblies();
+        foreach(var assembly in assemblies)
+        {
+            
+            var mi = ReflectionUtils.GetFunctionFromAssembly(assembly, typeName, functionName, functionArity);
+            if (mi != null)
+            {
+                var d = ReflectionUtils.CreateDelegate(mi);
+                return new DelegateEntry()
+                {
+                    d = d,
+                    mi = mi
+                };
+            }
+        }
+        return new DelegateEntry();
+    }
+
+    static DelegateEntry GetNativeFunction(string functionName, int arity = -1)
+    {
+        if (!s_DelegateCache.TryGetValue(functionName, out var entry))
+        {
+            entry = TryCreateEntry(functionName, arity);
+            if (entry.IsValid)
+                s_DelegateCache[functionName] = entry;
+        }
+        return entry;
+    }
+
+    static LispValue InvokeNativeFunction(DelegateEntry entry, List<LispValue> args)
+    {
+        try
+        {
+            var objList = args.Select(a => LispValue.ToObject(a)).ToArray();
+            var result = entry.d.DynamicInvoke(objList);
+            return LispValue.FromObject(result);
+        }
+        catch (Exception e)
+        {
+            var functionName = args[0].objValue.ToString();
+            throw new LispRuntimeException($"Error while executing native function: {entry.mi.Name} => {e.Message}");
+        }
+    }
+
+    public static LispValue GetAndInvokeNativeFunction(LispContext ctx, List<LispValue> args)
+    {
+        ValidateArgsCount(args, 1);
+        if (args[0].type != LispType.String)
+            throw new LispRuntimeException($"Function name must be a string: {args[0]}");
+        var functionName = args[0].objValue.ToString();
+        var argRest = args.Skip(1).ToList();
+        var entry = GetNativeFunction(functionName, argRest.Count);
+        if (entry.IsValid)
+        {
+            return InvokeNativeFunction(entry, argRest);
+        }
+        throw new LispRuntimeException($"Cannot find native function: {functionName}");
+    }
+
+    public static LispValue GetNativeFunction(LispContext ctx, List<LispValue> args)
+    {
+        ValidateArgsCount(args, 1);
+        if (args[0].type != LispType.String)
+            throw new LispRuntimeException($"Function name must be a string: {args[0]}");
+        var functionName = args[0].objValue.ToString();
+        var arity = -1;
+        if (args.Count > 1 && args[1].type == LispType.Number)
+            arity = (int)args[1].floatValue;
+
+        var entry = GetNativeFunction(functionName, arity);
+        if (entry.IsValid)
+        {
+            var proc = new Procedure((ctx, procArgs) =>
+            {
+                return InvokeNativeFunction(entry, procArgs);
+            });
+            return LispValue.Create(proc);
+        }
+
+        throw new LispRuntimeException($"Cannot find native function: {functionName}");
     }
 }

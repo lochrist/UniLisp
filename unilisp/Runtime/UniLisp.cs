@@ -309,6 +309,11 @@ namespace UniLisp
             return func(ctx, argList);
         }
 
+        public LispValue InvokeCallable(LispContext ctx, List<LispValue> args)
+        {
+            return func(ctx, args);
+        }
+
         public LispValue EvalExpr(LispContext ctx, LispValue args)
         {
             return ctx.Eval(expr, new Env(parameters, args, env));
@@ -417,7 +422,8 @@ namespace UniLisp
                 else if (EqSym(op, set))
                 {
                     // (set! var exp)
-                    env.Update(expr.listValue[1].ToString(), expr.listValue[2]);
+                    var valueToSet = Eval(expr.listValue[2], env);
+                    env.Update(expr.listValue[1].ToString(), valueToSet);
                     return LispValue.Nil;
                 }
                 else if (EqSym(op, define))
@@ -817,6 +823,9 @@ namespace UniLisp
             RegisterProcedure("length", CoreFunctionBindings.Length);
 
             RegisterProcedure("eval", CoreFunctionBindings.Eval);
+
+            RegisterProcedure("#", CoreFunctionBindings.GetAndInvokeNativeFunction);
+            RegisterProcedure("get#", CoreFunctionBindings.GetNativeFunction);
 
             var initCode = @"(begin
 (define-macro and (lambda args 

@@ -22,6 +22,10 @@ public class UniLispTests
         var g2 = g.Groups[1];
 
         // Use the Assert class to test conditions
+
+        var mi = typeof(UnityEngine.Debug).GetMethods();
+
+
     }
 
     public static class GetMethodInfoUtil
@@ -443,5 +447,28 @@ public class UniLispTests
     public void EvalCoreLib([ValueSource(nameof(s_EvalCoreLibTestCases))] StringifyTestCase t)
     {
         EvalTest(t);
+    }
+
+    static readonly StringifyTestCase[] s_NativeCallTestCases = new StringifyTestCase[]
+    {
+        new StringifyTestCase("(# \"UnityEngine.Debug.Log\" \"Hello!\")"),
+        new StringifyTestCase("(set! logMe (get# \"UnityEngine.Debug.Log\")))"),
+        new StringifyTestCase("(begin (set! logMe (get# \"UnityEngine.Debug.Log\")) (logMe \"Hello!\"))"),
+    };
+
+    [Test]
+    public void EvalNativeCall([ValueSource(nameof(s_NativeCallTestCases))] StringifyTestCase t)
+    {
+        var ctx = new LispContext();
+        var inport = new InPort(new StringReader(t.expr));
+
+        if (t.shouldThrow)
+        {
+            Assert.Throws<LispRuntimeException>(() => ctx.Eval(inport));
+        }
+        else
+        {
+            var result = ctx.Eval(inport);
+        }
     }
 }
