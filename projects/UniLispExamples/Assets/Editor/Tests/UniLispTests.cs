@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using NUnit.Framework;
 using UniLisp;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.TestTools;
 
@@ -28,18 +29,15 @@ public class UniLispTests
 
     }
 
-    public static class GetMethodInfoUtil
+    [Test]
+    public void SimpleSelectionTest()
     {
-        // No cast necessary
-        public static MethodInfo GetMethodInfo(Action action) => action.Method;
-        public static MethodInfo GetMethodInfo<T>(Action<T> action) => action.Method;
-        public static MethodInfo GetMethodInfo<T, U>(Action<T, U> action) => action.Method;
-        public static MethodInfo GetMethodInfo<TResult>(Func<TResult> fun) => fun.Method;
-        public static MethodInfo GetMethodInfo<T, TResult>(Func<T, TResult> fun) => fun.Method;
-        public static MethodInfo GetMethodInfo<T, U, TResult>(Func<T, U, TResult> fun) => fun.Method;
+        var obj = GameObject.Find("Main Camera");
+        Assert.NotNull(obj);
+        Assert.IsTrue(obj);
 
-        // Cast necessary
-        public static MethodInfo GetMethodInfo(Delegate del) => del.Method;
+        Selection.activeObject = obj;
+        Assert.AreEqual(Selection.activeObject, obj);
     }
 
     public static float Add(float f1, float f2)
@@ -51,7 +49,7 @@ public class UniLispTests
     public void DelegateDynamicCalling()
     {
         // var d = Delegate.CreateDelegate(typeof(UniLispTests), UniLispTests.Add);
-        var mi = GetMethodInfoUtil.GetMethodInfo<float, float, float>(Add);
+        var mi = ReflectionUtils.GetMethodInfo<float, float, float>(Add);
         var d = Delegate.CreateDelegate(typeof(Func<float, float, float>), mi);
         var result = d.DynamicInvoke(34, 45);
 
@@ -486,6 +484,8 @@ public class UniLispTests
         new StringifyTestCase("(# \"UnityEngine.Debug.Log\" \"Hello!\")"),
         new StringifyTestCase("(set! logMe (get# \"UnityEngine.Debug.Log\")))"),
         new StringifyTestCase("(begin (set! logMe (get# \"UnityEngine.Debug.Log\")) (logMe \"Hello!\"))"),
+
+        new StringifyTestCase("(# \"UnityEngine.GameObject.Find\" \"Main Camera\")"),
     };
 
     [Test]

@@ -80,51 +80,60 @@ public static class ReflectionUtils
     public static Delegate CreateDelegate(MethodInfo mi)
     {
         Type delegateType = null;
+        
         if (mi.ReturnType == typeof(void))
         {
+            Type genericAction = null;
             switch(mi.GetParameters().Length)
             {
                 case 0:
-                    delegateType = typeof(Action);
+                    genericAction = typeof(Action);
                     break;
                 case 1:
-                    delegateType = typeof(Action<>);
+                    genericAction = typeof(Action<>);
                     break;
                 case 2:
-                    delegateType = typeof(Action<,>);
+                    genericAction = typeof(Action<,>);
                     break;
                 case 3:
-                    delegateType = typeof(Action<,,>);
+                    genericAction = typeof(Action<,,>);
                     break;
                 case 4:
-                    delegateType = typeof(Action<,,,>);
+                    genericAction = typeof(Action<,,,>);
                     break;
                 default:
                     throw new UniLisp.LispRuntimeException($"Arity unsupported for {mi.Name}");
             }
+
+            var paramTypes = mi.GetParameters().Select(p => p.ParameterType).ToArray();
+            delegateType = genericAction.MakeGenericType(paramTypes);
         }
         else
         {
+            Type genericFunc = null;
             switch (mi.GetParameters().Length)
             {
                 case 0:
-                    delegateType = typeof(Func<>);
+                    genericFunc = typeof(Func<>);
                     break;
                 case 1:
-                    delegateType = typeof(Func<,>);
+                    genericFunc = typeof(Func<,>);
                     break;
                 case 2:
-                    delegateType = typeof(Func<,,>);
+                    genericFunc = typeof(Func<,,>);
                     break;
                 case 3:
-                    delegateType = typeof(Func<,,,>);
+                    genericFunc = typeof(Func<,,,>);
                     break;
                 case 4:
-                    delegateType = typeof(Func<,,,,>);
+                    genericFunc = typeof(Func<,,,,>);
                     break;
                 default:
                     throw new UniLisp.LispRuntimeException($"Arity unsupported for {mi.Name}");
             }
+
+            var paramTypes = mi.GetParameters().Select(p => p.ParameterType).Concat(new[] { mi.ReturnType }).ToArray();
+            delegateType = genericFunc.MakeGenericType(paramTypes);
         }
 
         try
@@ -135,6 +144,18 @@ public static class ReflectionUtils
         {
             throw new UniLisp.LispRuntimeException($"Cannot create Delegate for {mi.Name}");
         }
+    }
+
+    public static bool ExtractTypeFromFunctionName(string functionFullName, out string typeName, out string functionName)
+    {
+        typeName = null;
+        functionName = null;
+        var functionNameTokenIndex = functionFullName.LastIndexOf(".");
+        if (functionNameTokenIndex == -1)
+            return false;
+        typeName = functionFullName.Substring(0, functionNameTokenIndex);
+        functionName = functionFullName.Substring(functionNameTokenIndex + 1);
+        return true;
     }
 
     private static readonly string[] s_IgnoredAssemblies =
@@ -158,6 +179,21 @@ public static class ReflectionUtils
     {
         var name = assemblyName.Name;
         return s_IgnoredAssemblies.Any(candidate => Regex.IsMatch(name, candidate));
+    }
+
+    public static MethodInfo GetFunctionFromAssemblies(string typeName, string functionName, int arity)
+    {
+        var assemblies = GetValidAssemblies();
+        foreach (var assembly in assemblies)
+        {
+            var mi = GetFunctionFromAssembly(assembly, typeName, functionName, arity);
+            if (mi != null)
+            {
+                return mi;
+            }
+        }
+
+        return null;
     }
 
     public static MethodInfo GetFunctionFromAssembly(Assembly assembly, string typeName, string functionName, int arity)

@@ -247,13 +247,12 @@ public static class CoreFunctionBindings
     }
 
     static Dictionary<string, DelegateEntry> s_DelegateCache = new Dictionary<string, DelegateEntry>();
-    private static DelegateEntry TryCreateEntry(string functionName, int functionArity)
+    private static DelegateEntry TryCreateEntry(string functionFullName, int functionArity)
     {
-        var functionNameTokenIndex = functionName.LastIndexOf(".");
-        if (functionNameTokenIndex == -1)
-            throw new LispRuntimeException($"Function name needs to be fully qualified with its type: {functionName}");
-        var typeName = functionName.Substring(0, functionNameTokenIndex);
-        functionName = functionName.Substring(functionNameTokenIndex + 1);
+        if (!ReflectionUtils.ExtractTypeFromFunctionName(functionFullName, out var typeName, out var functionName))
+        {
+            throw new LispRuntimeException($"Cannot extract type from full function name {functionFullName}");
+        }
 
         var assemblies = ReflectionUtils.GetValidAssemblies();
         foreach(var assembly in assemblies)
