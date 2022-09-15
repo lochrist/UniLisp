@@ -323,7 +323,9 @@ public class UniLispTests
 
         new StringifyTestCase("(begin (define (twice x) (* 2 x)) (twice 34))", "68"),
 
-        new StringifyTestCase(@"(begin (define fib (lambda (n) (if (<= 2 n) (+ (fib (- n 1)) (fib (- n 2))) n ))) (fib 10))", "55")
+        new StringifyTestCase(@"(begin (define fib (lambda (n) (if (<= 2 n) (+ (fib (- n 1)) (fib (- n 2))) n ))) (fib 10))", "55"),
+
+        new StringifyTestCase("(begin (begin (define v 34) (set! v (+ v 8)))  v)", "42"),
     };
 
     static void EvalTest(StringifyTestCase t)
@@ -339,7 +341,7 @@ public class UniLispTests
         {
             var result = ctx.Eval(inport);
             var resultStr = result.ToString();
-            Assert.AreEqual(resultStr, t.expected);
+            Assert.AreEqual(t.expected, resultStr);
         }
     }
 
@@ -441,6 +443,26 @@ public class UniLispTests
         new StringifyTestCase("(eval (+ 1 4 5))", "10"),
         new StringifyTestCase("(eval \"ping\")", "\"ping\""),
         new StringifyTestCase("(eval '(+ 1 4 5))", "10"),
+
+        new StringifyTestCase("(map)") { shouldThrow = true },
+        new StringifyTestCase("(map 1)") { shouldThrow = true },
+        new StringifyTestCase("(map + 1)") { shouldThrow = true },
+        new StringifyTestCase("(begin (define (twice x) (* x x)) (map twice '(1 2 3 4)))", "(1 4 9 16)"),
+
+        new StringifyTestCase("(apply)") { shouldThrow = true },
+        new StringifyTestCase("(apply 1)") { shouldThrow = true },
+        new StringifyTestCase("(apply + 1)") { shouldThrow = true },
+        new StringifyTestCase("(apply + '(1 2 3))", "6"),
+
+        new StringifyTestCase("(while)") { shouldThrow = true },
+        new StringifyTestCase("(while 2)") { shouldThrow = true },
+        new StringifyTestCase(@"(begin 
+(set! i 0) 
+(while (< i 3) 
+    (set! i (+ i 1))
+    i
+))", "3"),
+
     };
 
     [Test]

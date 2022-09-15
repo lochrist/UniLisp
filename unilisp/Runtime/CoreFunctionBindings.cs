@@ -199,6 +199,46 @@ public static class CoreFunctionBindings
         return LispValue.Create(v1.objValue == v2.objValue);
     }
 
+    public static LispValue Map(LispContext ctx, List<LispValue> args)
+    {
+        ValidateArgsCount(args, 2);
+        if (args[0].type != LispType.Procedure)
+            throw new LispRuntimeException($"First argument to Map must be a procedure {args[0]}");
+        if (args[1].type != LispType.List)
+            throw new LispRuntimeException($"Second argument to Map must be a list {args[1]}");
+        var proc = (Procedure)args[0].objValue;
+        var result = LispValue.Create(args[1].listValue.Select(v => proc.Invoke(ctx, new List<LispValue>() { v })).ToList());
+        return result;
+    }
+
+    public static LispValue Apply(LispContext ctx, List<LispValue> args)
+    {
+        ValidateArgsCount(args, 2);
+        if (args[0].type != LispType.Procedure)
+            throw new LispRuntimeException($"First argument to Apply must be a procedure {args[0]}");
+        if (args[1].type != LispType.List)
+            throw new LispRuntimeException($"Second argument to Apply must be a list {args[1]}");
+        var proc = (Procedure)args[0].objValue;
+        return proc.Invoke(ctx, args[1].listValue);
+    }
+
+    public static LispValue While(LispContext ctx, List<LispValue> args)
+    {
+        ValidateArgsCount(args, 2);
+
+        var cond = args[0];
+        var statements = args.Skip(1);
+        var result = LispValue.Nil;
+        while (LispContext.IsTruish(ctx.Eval(cond)))
+        {
+            foreach(var s in statements)
+            {
+                result = ctx.Eval(s);
+            }
+        }
+        return result;
+    }
+
     struct DelegateEntry
     {
         public Delegate d;

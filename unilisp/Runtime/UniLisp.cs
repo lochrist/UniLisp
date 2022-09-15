@@ -290,6 +290,7 @@ namespace UniLisp
         public Env env;
         public Func<LispContext, List<LispValue>, LispValue> func;
         public bool IsCallable => func != null;
+        public bool lateParamsEval;
 
         public Procedure(LispValue parameters, LispValue expr, Env env)
         {
@@ -303,20 +304,13 @@ namespace UniLisp
             func = f;
         }
 
-        public LispValue InvokeCallable(LispContext ctx, LispValue args)
+        public LispValue Invoke(LispContext ctx, List<LispValue> args)
         {
-            var argList = args.type == LispType.List ? args.listValue : new List<LispValue>() { args };
-            return func(ctx, argList);
-        }
-
-        public LispValue InvokeCallable(LispContext ctx, List<LispValue> args)
-        {
-            return func(ctx, args);
-        }
-
-        public LispValue EvalExpr(LispContext ctx, LispValue args)
-        {
-            return ctx.Eval(expr, new Env(parameters, args, env));
+            if (IsCallable)
+            {
+                return func(ctx, args);
+            }
+            return ctx.Eval(expr, new Env(parameters, LispValue.Create(args), env));
         }
     }
 
@@ -444,11 +438,15 @@ namespace UniLisp
                 else if (EqSym(op, begin))
                 {
                     // (begin exp+)
-                    for (var i = 1; i < expr.listValue.Count; ++i)
+
+                    // Execute until the element BEFORE last
+                    for (var i = 1; i < expr.listValue.Count - 1; ++i)
                     {
                         var statement = expr.listValue[i];
                         Eval(statement, env);
                     }
+
+                    // execute last element in the next loop to ensure proper tail recursion
                     expr = expr.listValue.Last();
                 }
                 else
@@ -458,16 +456,19 @@ namespace UniLisp
                     if (op.type != LispType.Procedure)
                         throw new LispRuntimeException($"Cannot invoke: {op}");
                     var proc = (Procedure)op.objValue;
-                    var evaluatedArguments = LispValue.Create(expr.listValue.Skip(1).Select(v => Eval(v, env)).ToList());
+                    var args = expr.listValue.Skip(1);
+                    var evaluatedArguments = proc.lateParamsEval ? 
+                        args.ToList() :
+                        args.Select(v => Eval(v, env)).ToList();
                     if (proc.IsCallable)
                     {
-                        return proc.InvokeCallable(this, evaluatedArguments);
+                        return proc.Invoke(this, evaluatedArguments);
                     }
                     else
                     {
                         // this ensure tail recursion with the while statement above.
                         expr = proc.expr;
-                        env = new Env(proc.parameters, evaluatedArguments, proc.env);
+                        env = new Env(proc.parameters, LispValue.Create(evaluatedArguments), proc.env);
                     }
                 }
             }
@@ -521,10 +522,10 @@ namespace UniLisp
         }
 
         #region Native bindings
-        public LispValue RegisterProcedure(string name, Func<LispContext, List<LispValue>, LispValue> func)
+        public LispValue RegisterProcedure(string name, Func<LispContext, List<LispValue>, LispValue> func, bool lateParamsEval = false)
         {
             var sym = GetSym(name);
-            var proc = new Procedure(func);
+            var proc = new Procedure(func) { lateParamsEval = lateParamsEval };
             var procValue = LispValue.Create(proc);
             m_GlobalEnv.Update(name, procValue);
             return procValue;
@@ -710,8 +711,8 @@ namespace UniLisp
             if (expr.listValue[0].type == LispType.Symbol && m_MacroTable.TryGetValue(expr.listValue[0].ToString(), out var macro))
             {
                 var proc = (Procedure)macro.objValue;
-                var args = LispValue.Create(expr.listValue.Skip(1).ToList());
-                var evaluatedMacro = proc.EvalExpr(this, args);
+                var args = expr.listValue.Skip(1).ToList();
+                var evaluatedMacro = proc.Invoke(this, args);
                 var expandedMacro = Expand(evaluatedMacro, topLevel);
                 return expandedMacro;
             }
@@ -720,7 +721,7 @@ namespace UniLisp
             return LispValue.Create(lv);
         }
 
-        private static bool IsTruish(LispValue v)
+        public static bool IsTruish(LispValue v)
         {
             switch(v.type)
             {
@@ -823,6 +824,9 @@ namespace UniLisp
             RegisterProcedure("length", CoreFunctionBindings.Length);
 
             RegisterProcedure("eval", CoreFunctionBindings.Eval);
+            RegisterProcedure("map", CoreFunctionBindings.Map);
+            RegisterProcedure("apply", CoreFunctionBindings.Apply);
+            RegisterProcedure("while", CoreFunctionBindings.While, true);
 
             RegisterProcedure("#", CoreFunctionBindings.GetAndInvokeNativeFunction);
             RegisterProcedure("get#", CoreFunctionBindings.GetNativeFunction);
