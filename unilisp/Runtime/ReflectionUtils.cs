@@ -140,7 +140,7 @@ public static class ReflectionUtils
         {
             return Delegate.CreateDelegate(delegateType, mi);
         }
-        catch(System.Exception e)
+        catch(System.Exception)
         {
             throw new UniLisp.LispRuntimeException($"Cannot create Delegate for {mi.Name}");
         }
@@ -192,7 +192,6 @@ public static class ReflectionUtils
                 return mi;
             }
         }
-
         return null;
     }
 
@@ -214,7 +213,7 @@ public static class ReflectionUtils
             if (m.Name.Contains("Begin") || m.Name.Contains("End"))
                 continue;
 
-            if (m.Name == functionName && m.GetParameters().Length == arity)
+            if (m.Name == functionName && (arity == -1 || m.GetParameters().Length == arity))
                 return m;
         }
         return null;

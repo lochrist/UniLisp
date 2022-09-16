@@ -194,6 +194,11 @@ namespace UniLisp
                 if (m.Success)
                 {
                     token = m.Groups[1].Value;
+                    var newLine = m.Groups[2].Value;
+                    if (newLine == m_Line)
+                    {
+                        throw new LispSyntaxException($"Cannot parse line: {m_Line}");
+                    }
                     m_Line = m.Groups[2].Value;
                 }
                 else
@@ -277,6 +282,15 @@ namespace UniLisp
             return m_Outer.Find(var);
         }
 
+        public bool TryFind(string var, out LispValue symbolValue)
+        {
+            if (m_Values.TryGetValue(var, out symbolValue))
+                return true;
+            if (m_Outer == null)
+                return false;
+            return m_Outer.TryFind(var, out symbolValue);
+        }
+
         public void Update(string binding, LispValue value)
         {
             m_Values[binding] = value;
@@ -320,6 +334,10 @@ namespace UniLisp
 
         Dictionary<string, LispValue> m_StringTable = new Dictionary<string, LispValue>();
         Dictionary<string, LispValue> m_MacroTable = new Dictionary<string, LispValue>();
+
+        public delegate bool SymbolResolver(LispContext ctx, string symbolName, out LispValue value);
+
+        Dictionary<string, SymbolResolver> m_SymbolResolvers = new Dictionary<string, SymbolResolver>();
         Dictionary<string, LispValue> m_Quotes;
 
         LispValue quote;
@@ -394,7 +412,17 @@ namespace UniLisp
                 if (expr.type == LispType.Symbol)
                 {
                     // variable reference
-                    return env.Find(expr.ToString());
+                    var symbolName = expr.ToString();
+                    if (env.TryFind(symbolName, out var value))
+                        return value;
+
+                    if (TryResolveSymbol(symbolName, out value))
+                    {
+                        m_GlobalEnv.Update(symbolName, value);
+                        return value;
+                    }
+
+                    throw new LispRuntimeException($"Cannot resolve symbol {symbolName}");
                 }
 
                 // constant literal
@@ -497,15 +525,15 @@ namespace UniLisp
                     var val = Eval(x, m_GlobalEnv);
                     outport?.Write(LispValue.Stringigy(val));
                 }
-                catch (LispSyntaxException e)
+                catch (LispSyntaxException)
                 {
 
                 }
-                catch (LispRuntimeException e)
+                catch (LispRuntimeException)
                 {
 
                 }
-                catch (System.Exception e)
+                catch (System.Exception)
                 {
 
                 }
@@ -521,7 +549,7 @@ namespace UniLisp
             return ReadToken(inport, token);
         }
 
-        #region Native bindings
+        #region Customization
         public LispValue RegisterProcedure(string name, Func<LispContext, List<LispValue>, LispValue> func, bool lateParamsEval = false)
         {
             var sym = GetSym(name);
@@ -538,6 +566,11 @@ namespace UniLisp
             var procValue = LispValue.Create(proc);
             m_MacroTable[name] = procValue;
             return procValue;
+        }
+
+        public void RegisterSymbolValueGetter(string id, SymbolResolver resolver)
+        {
+            m_SymbolResolvers[id] = resolver;
         }
         #endregion
 
@@ -750,6 +783,19 @@ namespace UniLisp
             return false;
         }
 
+        private bool TryResolveSymbol(string name, out LispValue value)
+        {
+            foreach(var resolver in m_SymbolResolvers.Values)
+            {
+                if (resolver(this, name, out value))
+                {
+                    return true;
+                }
+            }
+            value = new LispValue();
+            return false;
+        }
+
         private static bool IsPair(LispValue v)
         {
             return v.type == LispType.List && v.listValue.Count > 0;
@@ -831,6 +877,14 @@ namespace UniLisp
             RegisterProcedure("<", CoreFunctionBindings.Lower);
             RegisterProcedure("<=", CoreFunctionBindings.LowerOrEqual);
             RegisterProcedure("=", CoreFunctionBindings.Equal);
+
+            RegisterProcedure("sqrt", CoreFunctionBindings.UnaryMathFunction(Mathf.Sqrt));
+            RegisterProcedure("cos", CoreFunctionBindings.UnaryMathFunction(Mathf.Cos));
+            RegisterProcedure("sin", CoreFunctionBindings.UnaryMathFunction(Mathf.Sin));
+            RegisterProcedure("tan", CoreFunctionBindings.UnaryMathFunction(Mathf.Tan));
+            RegisterProcedure("abs", CoreFunctionBindings.UnaryMathFunction(Mathf.Abs));
+            RegisterProcedure("sign", CoreFunctionBindings.UnaryMathFunction(Mathf.Sign));
+
             RegisterProcedure("equal?", CoreFunctionBindings.Equal);
             RegisterProcedure("eq?", CoreFunctionBindings.Eq);
 
@@ -856,10 +910,11 @@ namespace UniLisp
             RegisterProcedure("apply", CoreFunctionBindings.Apply);
             RegisterProcedure("while", CoreFunctionBindings.While, true);
 
-            RegisterProcedure("#", CoreFunctionBindings.GetAndInvokeNativeFunction);
-            RegisterProcedure("get#", CoreFunctionBindings.GetNativeFunction);
+            RegisterProcedure("#", CoreFunctionBindings.GetNativeFunction);
 
             RegisterMacro("let", LetMacro);
+
+            RegisterSymbolValueGetter(nameof(CoreFunctionBindings.ResolveNativeFunctionSymbol), CoreFunctionBindings.ResolveNativeFunctionSymbol);
 
             var initCode = @"(begin
 (define-macro and (lambda args 

@@ -334,6 +334,8 @@ public class UniLispTests
         new StringifyTestCase("(begin (begin (define v 34) (set! v (+ v 8)))  v)", "42"),
 
         new StringifyTestCase("(let ((x 8) (y 34)) (+ x y))", "42"),
+
+        new StringifyTestCase("unknownSymbol") { shouldThrow = true },
     };
 
     static void EvalTest(StringifyTestCase t)
@@ -482,10 +484,18 @@ public class UniLispTests
     static readonly StringifyTestCase[] s_NativeCallTestCases = new StringifyTestCase[]
     {
         new StringifyTestCase("(# \"UnityEngine.Debug.Log\" \"Hello!\")"),
-        new StringifyTestCase("(set! logMe (get# \"UnityEngine.Debug.Log\")))"),
-        new StringifyTestCase("(begin (set! logMe (get# \"UnityEngine.Debug.Log\")) (logMe \"Hello!\"))"),
-
+        new StringifyTestCase("(set! logMe (# \"UnityEngine.Debug.Log\")))"),
+        new StringifyTestCase("(begin (set! logMe (# \"UnityEngine.Debug.Log\")) (logMe \"Hello!\"))"),
         new StringifyTestCase("(# \"UnityEngine.GameObject.Find\" \"Main Camera\")"),
+        new StringifyTestCase("(# 'NativeAPITests.CreateNewSceneObject \"Main Camera\")"),
+        new StringifyTestCase("(# 'NativeAPITests.SelectObject (# 'NativeAPITests.CreateNewSceneObject \"Main Camera\"))"),
+
+        new StringifyTestCase("(#UnityEngine.Debug.Log \"Hello!\")"),
+        new StringifyTestCase("(set! logMe #UnityEngine.Debug.Log))"),
+        new StringifyTestCase("(begin (set! logMe #UnityEngine.Debug.Log) (logMe \"Hello!\"))"),
+        new StringifyTestCase("(#UnityEngine.GameObject.Find \"Main Camera\")"),
+        new StringifyTestCase("(#NativeAPITests.CreateNewSceneObject \"Main Camera\")"),
+        new StringifyTestCase("(#NativeAPITests.SelectObject (#NativeAPITests.CreateNewSceneObject \"Main Camera\"))"),
     };
 
     [Test]

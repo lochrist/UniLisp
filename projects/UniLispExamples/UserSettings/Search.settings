@@ -2,7 +2,7 @@ trackSelection = true
 fetchPreview = true
 defaultFlags = 0
 keepOpen = false
-queryFolder = "Assets"
+queryFolder = "Assets/Snippets"
 onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
@@ -13,9 +13,12 @@ scopes = {
 	"last_search.BBA7E544" = "fib 10"
 	"OpenInspectorPreview.BBA7E544" = "0"
 	"currentGroup.BBA7E544" = "all"
-	"last_search.1EA26A9C" = ""
+	"last_search.1EA26A9C" = "(log \"hackweek is fun!\")"
 	"OpenInspectorPreview.1EA26A9C" = "0"
 	"currentGroup.1EA26A9C" = ""
+	"last_search.D7930BE4" = ""
+	"OpenInspectorPreview.D7930BE4" = "0"
+	"currentGroup.D7930BE4" = null
 }
 providers = {
 	lisp = {
@@ -72,20 +75,71 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
-	""
-	"(and 1 1)"
-	"list 1 2 3"
-	"(car '(1 2)"
-	"fi"
-	"define fib (lambda (n) (if (<= 2 n) (+ (fib (- n 1)) (fib (- n 2))) n ))"
+	"(log \"hackweek is \""
+	"(log \"\""
 	"("
+	"# \"UnityEngine.Debug.Log\" \"hello!\""
+	"(begin 
+    (define (celsius->fahrenheit celsius)
+        (+ (* celsius 1.8) 32)) 
+    (list 
+        (celsius->fahrenheit 0)
+        (celsius->fahrenheit 100)
+        (celsius->fahrenheit 30)
+        (celsius->fahrenheit -30)))"
+	"(begin 
+    (define (factorial n)
+        (if (= n 0)
+            1
+            (* n (factorial (- n 1)))))
+    (factorial 5))"
+	"(begin (define fib (lambda (n) (if (<= 2 n) (+ (fib (- n 1)) (fib (- n 2))) n ))) (fib 10))"
+	"(begin 
+    (define (square x)
+        (* x x))
+    (square 5))"
+	"(begin 
+ (define (sum ls)
+     (if (null? ls) 0
+        (+ (car ls) (sum (cdr ls)))))
+  (sum '(1 2 3 4))
+ )"
+	""
+	"log \"hackwekk is great!\""
+	"log \"hackwekk is\""
+	"log \"hello\""
+	"(begin
+    (set! log (get# \"UnityEngine.Debug.Log\"))
+    (log \"hello\")
+    )"
+	"(begin 
+ 
+ )"
+	"(begin 
+ (define (sum ls)
+     (if (null? ls) 0
+        (+ (car ls) (sum (cdr ls)))))
+  (sum '(1 2 3))
+ )"
+	"(begin 
+ (define (sum ls)
+ (if (null? ls) 0
+ (+ (car ls) (sum (cdr ls)))))
+ )"
+	"(begin 
+    (define (factorial n)
+        (if (= n 0)
+            1
+            (* n (factorial (- n 1)))))
+ )"
+	"(define (sum ls)     (if (null? ls) 0        (+ (car ls) (sum (cdr ls)))))"
+	"(begin )"
 ]
 searchItemFavorites = [
 ]
 savedSearchesSortOrder = 0
-showSavedSearchPanel = false
-expandedQueries = [
-]
+showSavedSearchPanel = true
+expandedQueries = [961552606]
 queryBuilder = false
 ignoredProperties = "id;name;classname;imagecontentshash"
 helperWidgetCurrentArea = "all"

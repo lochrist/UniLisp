@@ -79,6 +79,15 @@ public static class CoreFunctionBindings
         return LispValue.Create(args.All(v => v.floatValue == args[0].floatValue));
     }
 
+    public static Func<LispContext, List<LispValue>, LispValue> UnaryMathFunction(Func<float, float> func)
+    {
+        return (cxt, args) =>
+        {
+            ValidateNumberArgs(args, 1);
+            return LispValue.Create(func(args[0].floatValue));
+        };
+    }
+
     public static LispValue IsNumber(LispContext ctx, List<LispValue> args)
     {
         if (args.Count < 1)
@@ -247,6 +256,8 @@ public static class CoreFunctionBindings
     }
 
     static Dictionary<string, DelegateEntry> s_DelegateCache = new Dictionary<string, DelegateEntry>();
+    static Dictionary<string, LispValue> s_NativeProcedures = new Dictionary<string, LispValue>();
+
     private static DelegateEntry TryCreateEntry(string functionFullName, int functionArity)
     {
         if (!ReflectionUtils.ExtractTypeFromFunctionName(functionFullName, out var typeName, out var functionName))
@@ -298,39 +309,51 @@ public static class CoreFunctionBindings
         }
     }
 
-    public static LispValue GetAndInvokeNativeFunction(LispContext ctx, List<LispValue> args)
+    public static bool ResolveNativeFunctionSymbol(LispContext ctx, string symbolName, out LispValue value)
     {
-        ValidateArgsCount(args, 1);
-        if (args[0].type != LispType.String)
-            throw new LispRuntimeException($"Function name must be a string: {args[0]}");
-        var functionName = args[0].objValue.ToString();
-        var argRest = args.Skip(1).ToList();
-        var entry = GetNativeFunction(functionName, argRest.Count);
-        if (entry.IsValid)
+        if (!symbolName.StartsWith("#"))
         {
-            return InvokeNativeFunction(entry, argRest);
+            value = new LispValue();
+            return false;
         }
-        throw new LispRuntimeException($"Cannot find native function: {functionName}");
+        symbolName = symbolName.Substring(1);
+        return ResolveNativeFunctionSymbol(ctx, symbolName, -1, out value);
     }
 
-    public static LispValue GetNativeFunction(LispContext ctx, List<LispValue> args)
+    public static bool ResolveNativeFunctionSymbol(LispContext ctx, string symbolName, int arity, out LispValue value)
     {
-        ValidateArgsCount(args, 1);
-        if (args[0].type != LispType.String)
-            throw new LispRuntimeException($"Function name must be a string: {args[0]}");
-        var functionName = args[0].objValue.ToString();
-        var arity = -1;
-        if (args.Count > 1 && args[1].type == LispType.Number)
-            arity = (int)args[1].floatValue;
+        if (s_NativeProcedures.TryGetValue(symbolName, out value))
+        {
+            return true;
+        }
 
-        var entry = GetNativeFunction(functionName, arity);
+        var entry = GetNativeFunction(symbolName, arity);
         if (entry.IsValid)
         {
             var proc = new Procedure((ctx, procArgs) =>
             {
                 return InvokeNativeFunction(entry, procArgs);
             });
-            return LispValue.Create(proc);
+            value = LispValue.Create(proc);
+            s_NativeProcedures[symbolName] = value;
+            return true;
+        }
+        return false;
+    }
+
+    public static LispValue GetNativeFunction(LispContext ctx, List<LispValue> args)
+    {
+        ValidateArgsCount(args, 1);
+        if (args[0].type != LispType.String && args[0].type != LispType.Symbol)
+            throw new LispRuntimeException($"Function name must be a string or symbol: {args[0]}");
+        var functionName = args[0].objValue.ToString();
+        var arity = -1;
+        if (args.Count > 1 && args[1].type == LispType.Number)
+            arity = (int)args[1].floatValue;
+
+        if (ResolveNativeFunctionSymbol(ctx, functionName, arity, out var value))
+        {
+            return value;
         }
 
         throw new LispRuntimeException($"Cannot find native function: {functionName}");
