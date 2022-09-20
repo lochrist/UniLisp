@@ -5,8 +5,8 @@ Basic Lisp interpreter made to work in C# and created with a small Unity integra
 ## Inspiration
 UniLisp is heavily inspired by the 2 lispy articles by Peter Norvig:
 
-- How to write a Lisp Interpreter in Python](http://norvig.com/lispy.html)
-- An even better Lisp Interpreter in Python](https://norvig.com/lispy2.html)
+- [How to write a Lisp Interpreter in Python](http://norvig.com/lispy.html)
+- [An even better Lisp Interpreter in Python](https://norvig.com/lispy2.html)
 
 ## Features
 UniLisp supports :
