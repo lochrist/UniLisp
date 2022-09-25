@@ -187,8 +187,11 @@ namespace UniLisp
             {
                 if (string.IsNullOrEmpty(m_Line))
                     m_Line = m_Stream.ReadLine();
-                if (string.IsNullOrEmpty(m_Line))
+                if (m_Line == null) // If Readline is null, stream has been read completely
                     return null;
+                if (m_Line == "")
+                    continue;
+
                 var m = m_Tokenizer.Match(m_Line);
                 string token = null;
                 if (m.Success)

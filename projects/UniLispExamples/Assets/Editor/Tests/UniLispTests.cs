@@ -65,6 +65,8 @@ public class UniLispTests
         public string expected;
         public bool shouldThrow;
 
+        public string[] multiExpected;
+
         public StringifyTestCase(string expr, string expected = null)
         {
             this.expr = expr;
@@ -77,8 +79,17 @@ public class UniLispTests
             this.expected = expected;
         }
 
+        public StringifyTestCase(string expr, string[] multiExpected)
+        {
+            this.expr = expr;
+            this.multiExpected = multiExpected;
+        }
+
         public override string ToString()
         {
+            if (multiExpected != null)
+                return expr;
+
             if (!string.IsNullOrEmpty(expr))
             {
                 if (expr != expected)
@@ -185,6 +196,42 @@ public class UniLispTests
             var expr = ctx.ReadExpression(inport);
             var exprStr = LispValue.Stringigy(expr);
             Assert.AreEqual(t.expected, exprStr);
+        }
+    }
+
+    static readonly StringifyTestCase[] s_ReadMultiExpressionTestCases = new StringifyTestCase[]
+    {
+        new StringifyTestCase("4", new string[] {"4" }),
+        new StringifyTestCase("(define d 13) (define v 42)", new string[] {"(define d 13)", "(define v 42)" }),
+        new StringifyTestCase("(define d 13)(define v 42)", new string[] {"(define d 13)", "(define v 42)" }),
+        new StringifyTestCase(@"(define d 13)
+
+
+(define v 42)", new string[] {"(define d 13)", "(define v 42)" }),
+    };
+
+    [Test]
+    public void ReadMultiExpression([ValueSource(nameof(s_ReadMultiExpressionTestCases))] StringifyTestCase t)
+    {
+        var ctx = new LispContext();
+        var inport = new InPort(new StringReader(t.expr));
+
+        var results = new List<LispValue>();
+
+        var expr = LispValue.Nil;
+        while ((expr = ctx.ReadExpression(inport)).type != LispType.EoF)
+        {
+            results.Add(expr);
+        }
+
+        Assert.AreEqual(t.multiExpected.Length, results.Count);
+
+        for (var i = 0; i < t.multiExpected.Length; ++i)
+        {
+            var r = results[i];
+            var e = t.multiExpected[i];
+            var exprStr = LispValue.Stringigy(r);
+            Assert.AreEqual(e, exprStr);
         }
     }
 
