@@ -70,16 +70,19 @@ public class UniLispCustomEditor : Editor
             ExecuteScript();
         }
 
-        GUILayout.Label("REPL");
+        GUILayout.Label("REPL (Execute Buffer or Selection)");
         m_REPLText = GUILayout.TextArea(m_REPLText, GUILayout.Height(300));
-        if (GUILayout.Button("Execute Command"))
+        var editor = (TextEditor)GUIUtility.GetStateObject(typeof(TextEditor), GUIUtility.keyboardControl);
+        var toExecute = m_REPLText;
+        var executeSelection = false;
+        if (editor != null && editor.hasSelection && editor.SelectedText.Length > 0)
         {
-            var toExecute = m_REPLText;
-            var editor = (TextEditor)GUIUtility.GetStateObject(typeof(TextEditor), GUIUtility.keyboardControl);
-            if (editor != null && editor.hasSelection)
-            {
-                toExecute = editor.SelectedText;
-            }
+            toExecute = editor.SelectedText;
+            executeSelection = true;
+        }
+
+        if (GUILayout.Button(executeSelection ? "Execute Selection" : "Execute Commands Buffer"))
+        {
             Execute(toExecute);
         }
     }

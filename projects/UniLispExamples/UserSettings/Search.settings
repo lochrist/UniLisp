@@ -13,7 +13,7 @@ scopes = {
 	"last_search.BBA7E544" = "fib 10"
 	"OpenInspectorPreview.BBA7E544" = "0"
 	"currentGroup.BBA7E544" = "all"
-	"last_search.1EA26A9C" = "(define (celsius->fahrenheit celsius)     (+ (* celsius 1.8) 32)))"
+	"last_search.1EA26A9C" = "celsius->fahrenheit"
 	"OpenInspectorPreview.1EA26A9C" = "0"
 	"currentGroup.1EA26A9C" = ""
 	"last_search.D7930BE4" = ""
@@ -75,6 +75,7 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"celsius->fahrenheit"
 	"(define (celsius->fahrenheit celsius)     (+ (* celsius 1.8) 32)))"
 	"(log \"hackweek is \""
 	"(log \"\""
@@ -133,7 +134,6 @@ recentSearches = [
             1
             (* n (factorial (- n 1)))))
  )"
-	"(define (sum ls)     (if (null? ls) 0        (+ (car ls) (sum (cdr ls)))))"
 ]
 searchItemFavorites = [
 ]
