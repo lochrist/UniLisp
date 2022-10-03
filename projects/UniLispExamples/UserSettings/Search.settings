@@ -19,6 +19,16 @@ scopes = {
 	"last_search.D7930BE4" = ""
 	"OpenInspectorPreview.D7930BE4" = "0"
 	"currentGroup.D7930BE4" = null
+	"last_search.C1B72467" = "(begin 
+    (define (celsius->fahrenheit celsius)
+        (+ (* celsius 1.8) 32)) 
+    (list 
+        (celsius->fahrenheit 0)
+        (celsius->fahrenheit 100)
+        (celsius->fahrenheit 30)
+        (celsius->fahrenheit -30)))"
+	"OpenInspectorPreview.C1B72467" = "0"
+	"currentGroup.C1B72467" = "all"
 }
 providers = {
 	lisp = {
@@ -75,12 +85,6 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
-	"celsius->fahrenheit"
-	"(define (celsius->fahrenheit celsius)     (+ (* celsius 1.8) 32)))"
-	"(log \"hackweek is \""
-	"(log \"\""
-	"("
-	"# \"UnityEngine.Debug.Log\" \"hello!\""
 	"(begin 
     (define (celsius->fahrenheit celsius)
         (+ (* celsius 1.8) 32)) 
@@ -96,6 +100,7 @@ recentSearches = [
             (* n (factorial (- n 1)))))
     (factorial 5))"
 	"(begin (define fib (lambda (n) (if (<= 2 n) (+ (fib (- n 1)) (fib (- n 2))) n ))) (fib 10))"
+	"# \"UnityEngine.Debug.Log\" \"hello!\""
 	"(begin 
     (define (square x)
         (* x x))
@@ -106,6 +111,11 @@ recentSearches = [
         (+ (car ls) (sum (cdr ls)))))
   (sum '(1 2 3 4))
  )"
+	"celsius->fahrenheit"
+	"(define (celsius->fahrenheit celsius)     (+ (* celsius 1.8) 32)))"
+	"(log \"hackweek is \""
+	"(log \"\""
+	"("
 	""
 	"log \"hackwekk is great!\""
 	"log \"hackwekk is\""
@@ -127,12 +137,6 @@ recentSearches = [
  (define (sum ls)
  (if (null? ls) 0
  (+ (car ls) (sum (cdr ls)))))
- )"
-	"(begin 
-    (define (factorial n)
-        (if (= n 0)
-            1
-            (* n (factorial (- n 1)))))
  )"
 ]
 searchItemFavorites = [
